@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const ytdl = require("ytdl-core");
 //gotta import that fancy config file
 const config = require("./config.json")['configuration'];
-const botAdmins = require('./config.json')['configuration']['botAdmins'];
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
@@ -22,11 +21,25 @@ client.on("reconnecting", ()=>{
 });
 
 client.on("message", (message) => { //eww these indents suck but i'm too lazy to change the setting
-  if (message.content.startsWith(config["prefix"] + "yt")) {
+  if(message.author.id == client.user.id || message.author.bot) return;
+  if(message.content.toLowerCase().startsWith(config['prefix'] + 'join')){
+    if(message.member.voiceChannel){
+      if(message.member.voiceChannel.joinable){
+        message.member.voiceChannel.join().then((vc)=>{
+          message.reply('Joining `' + message.member.voiceChannel.name + '`');
+        });
+      } else {
+        message.reply("It seems that you are in a voice channel, but I can't join!");
+      }
+    } else {
+      message.reply("You are not in a voice channel!");
+    }
+  }
+  if (message.content.toLowerCase().startsWith(config["prefix"] + "yt")) {
     if (message.member.voiceChannel) {
       if (message.member.voiceChannel.joinable) {
         var parser = message.content.split(" "), parsed = [];
-        for (var i = 0; i <= parser.length; i++) {
+        for (let i = 0; i <= parser.length; i++) {
           if (i >= 1) {
           	parsed.push(parser[i]);		//Horrible parser because javascript sucks
           }
@@ -84,21 +97,96 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
     }
   }
 
-  if(message.content == config['prefix'] + 'invite'){
-    message.channel.send('Here, join our server! ' + config['guild-invite-link']);
+  if(message.content.toLowerCase() == config['prefix'] + 'invite'){
+    message.reply('join our server! ' + config['guild-invite-link']);
   }
-  if (message.content.toLowerCase() == config["prefix"] + "stop") {
+  if (message.content.toLowerCase() == config["prefix"] + "stop" || message.content.toLowerCase() == config["prefix"] + "disconnect" || message.content.toLowerCase() == config["prefix"] + "leave") {
   	if (message.guild.voiceConnection) {
       message.guild.voiceConnection.disconnect();
       message.channel.send("Disconnected.");
+      return;
   	} else {
   		message.reply("I am not in a voice channel!");
     }
-	}
-  if(message.content == config['prefix'] + 'eval' && config["enable-eval"]){
-    if(!botAdmins.includes(message.author.id)) return;
-    console.log(`EVAL RAN BY <${message.author}>: ${message.content.substring((config['prefix'] + 'eval').length)}`);
-    eval(message.content.substring((config['prefix'] + 'eval').length));
+	}/*
+Broken
+
+  if(message.content.toLowerCase() == config['prefix'] + 'eval' && config["enable-eval"] == true){
+    if(config['botAdmins'].includes(message.author.id)){
+      console.log(`EVAL RAN BY <${message.author}>: ${message.content.substring((config['prefix'] + 'eval').length)}`);
+      eval(message.content.substring((config['prefix'] + 'eval').length));
+    }else{
+      console.log(`EVAL ATTEMPT FROM <${message.author}> FAILED`);
+    }
+  }*/
+  if(message.content.toLowerCase() == config['prefix'] + 'view-config'){
+    message.channel.send({embed: {
+      color: 16753920,
+      author: {
+        name: client.user.username,
+        icon_url: client.user.displayAvatarURL
+      },
+      fields: [
+        {
+          name: "Token",
+          value: "**SECRET**",
+          inline: true
+        },
+        {
+          name: "Blacklisted Sites",
+          value: (function(){
+            if(config['blacklisted-sites'] == ''){
+              return 'None set';
+            }else{
+              return config['blacklisted-sites'].join(', ');
+            }
+          })(),
+          inline: true
+        },
+        {
+          name: "Custom Game Text",
+          value: (function(){
+            if (config['custom-game'] == "") {
+              return "Not set";
+            } else {
+              return config['custom-game'];
+            }
+          })(),
+          inline: true
+        },
+        {
+          name:'Status',
+          value: client.user.presence.status,
+          inline: true
+        },
+        {
+          name: 'prefix',
+          value: config['prefix'],
+          inline: true
+        },
+        {
+          name: 'Discord Server Invite Link',
+          value: config['guild-invite-link'],
+          inline: true
+        },
+        {
+          name: 'Bot Administrators (User IDs)',
+          value: (function(){
+            if(config['botAdmins'] == ''){
+              return 'None set';
+            }else{
+              return config['botAdmins'].join(', ');
+            }
+          })(),
+          inline: true
+        },
+        {
+          name: 'Eval for Administrators',
+          value: config['enable-eval'],
+          inline: true
+        }]
+
+    }});
   }
 });
 
