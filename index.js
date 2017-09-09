@@ -40,7 +40,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
 
         ytdl.getInfo(parsed).then((i, f) => {
           message.channel.send({embed: {
-            color: ff5733,
+            hexColor: "#ff5733", //TODO: Fix the color
             author: {
               name: client.user.username,
               icon_url: client.user.displayAvatarURL
@@ -57,7 +57,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
                 inline: true
               }
             ]
-          });
+          }});
           message.member.voiceChannel.join().then((connection) => {
             connection.playStream(stream).on("end", ()=> {connection.disconnect();});
           });
