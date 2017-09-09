@@ -166,7 +166,13 @@ Broken
         },
         {
           name: 'Discord Server Invite Link',
-          value: config['guild-invite-link'],
+          value: (function(){
+            if (config['guild-invite-link'] == "") {
+              return "Not set";
+            } else {
+              return config['guild-invite-link'];
+            }
+          })(),
           inline: true
         },
         {
