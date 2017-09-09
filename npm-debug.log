@@ -24,34 +24,34 @@
 13 silly mapToRegistry uri https://registry.npmjs.org/node-opus
 14 verbose request uri https://registry.npmjs.org/node-opus
 15 verbose request no auth needed
-16 info attempt registry request try #1 at 10:15:11 PM
-17 verbose request id 5ab75466aad502fd
+16 info attempt registry request try #1 at 10:21:15 PM
+17 verbose request id 4c87de16437fb928
 18 verbose etag W/"59a23da0-6dfc"
 19 verbose lastModified Sun, 27 Aug 2017 03:33:52 GMT
 20 http request GET https://registry.npmjs.org/node-opus
 21 http 304 https://registry.npmjs.org/node-opus
-22 verbose headers { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+22 verbose headers { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 22 verbose headers   via: '1.1 varnish',
 22 verbose headers   'cache-control': 'max-age=300',
 22 verbose headers   etag: 'W/"59a23da0-6dfc"',
 22 verbose headers   age: '0',
 22 verbose headers   connection: 'keep-alive',
-22 verbose headers   'x-served-by': 'cache-ord1737-ORD',
+22 verbose headers   'x-served-by': 'cache-ord1725-ORD',
 22 verbose headers   'x-cache': 'HIT',
 22 verbose headers   'x-cache-hits': '1',
-22 verbose headers   'x-timer': 'S1504926912.620313,VS0,VE20',
+22 verbose headers   'x-timer': 'S1504927276.564641,VS0,VE25',
 22 verbose headers   vary: 'Accept-Encoding, Accept' }
 23 silly get cb [ 304,
-23 silly get   { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+23 silly get   { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 23 silly get     via: '1.1 varnish',
 23 silly get     'cache-control': 'max-age=300',
 23 silly get     etag: 'W/"59a23da0-6dfc"',
 23 silly get     age: '0',
 23 silly get     connection: 'keep-alive',
-23 silly get     'x-served-by': 'cache-ord1737-ORD',
+23 silly get     'x-served-by': 'cache-ord1725-ORD',
 23 silly get     'x-cache': 'HIT',
 23 silly get     'x-cache-hits': '1',
-23 silly get     'x-timer': 'S1504926912.620313,VS0,VE20',
+23 silly get     'x-timer': 'S1504927276.564641,VS0,VE25',
 23 silly get     vary: 'Accept-Encoding, Accept' } ]
 24 verbose etag https://registry.npmjs.org/node-opus from cache
 25 verbose get saving node-opus to C:\Users\Sean\AppData\Roaming\npm-cache\registry.npmjs.org\node-opus\.cache.json
@@ -144,45 +144,45 @@
 77 silly mapToRegistry uri https://registry.npmjs.org/ogg-packet
 78 verbose request uri https://registry.npmjs.org/bindings
 79 verbose request no auth needed
-80 info attempt registry request try #1 at 10:15:12 PM
+80 info attempt registry request try #1 at 10:21:16 PM
 81 verbose etag W/"59b28ad4-4c18"
 82 verbose lastModified Fri, 08 Sep 2017 12:19:32 GMT
 83 http request GET https://registry.npmjs.org/bindings
-84 verbose request uri https://registry.npmjs.org/nan
+84 verbose request uri https://registry.npmjs.org/ogg-packet
 85 verbose request no auth needed
-86 info attempt registry request try #1 at 10:15:12 PM
-87 verbose etag W/"59a60a0b-20228"
-88 verbose lastModified Wed, 30 Aug 2017 00:42:51 GMT
-89 http request GET https://registry.npmjs.org/nan
-90 verbose request uri https://registry.npmjs.org/ogg-packet
+86 info attempt registry request try #1 at 10:21:16 PM
+87 verbose etag W/"50bbbf05-122e"
+88 verbose lastModified Sun, 02 Dec 2012 20:50:13 GMT
+89 http request GET https://registry.npmjs.org/ogg-packet
+90 verbose request uri https://registry.npmjs.org/nan
 91 verbose request no auth needed
-92 info attempt registry request try #1 at 10:15:12 PM
-93 verbose etag W/"50bbbf05-122e"
-94 verbose lastModified Sun, 02 Dec 2012 20:50:13 GMT
-95 http request GET https://registry.npmjs.org/ogg-packet
+92 info attempt registry request try #1 at 10:21:16 PM
+93 verbose etag W/"59a60a0b-20228"
+94 verbose lastModified Wed, 30 Aug 2017 00:42:51 GMT
+95 http request GET https://registry.npmjs.org/nan
 96 http 304 https://registry.npmjs.org/bindings
-97 verbose headers { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+97 verbose headers { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 97 verbose headers   via: '1.1 varnish',
 97 verbose headers   'cache-control': 'max-age=300',
 97 verbose headers   etag: 'W/"59b28ad4-4c18"',
-97 verbose headers   age: '112',
+97 verbose headers   age: '175',
 97 verbose headers   connection: 'keep-alive',
-97 verbose headers   'x-served-by': 'cache-ord1737-ORD',
+97 verbose headers   'x-served-by': 'cache-ord1725-ORD',
 97 verbose headers   'x-cache': 'HIT',
 97 verbose headers   'x-cache-hits': '1',
-97 verbose headers   'x-timer': 'S1504926912.809949,VS0,VE5',
+97 verbose headers   'x-timer': 'S1504927276.738766,VS0,VE0',
 97 verbose headers   vary: 'Accept-Encoding, Accept' }
 98 silly get cb [ 304,
-98 silly get   { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+98 silly get   { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 98 silly get     via: '1.1 varnish',
 98 silly get     'cache-control': 'max-age=300',
 98 silly get     etag: 'W/"59b28ad4-4c18"',
-98 silly get     age: '112',
+98 silly get     age: '175',
 98 silly get     connection: 'keep-alive',
-98 silly get     'x-served-by': 'cache-ord1737-ORD',
+98 silly get     'x-served-by': 'cache-ord1725-ORD',
 98 silly get     'x-cache': 'HIT',
 98 silly get     'x-cache-hits': '1',
-98 silly get     'x-timer': 'S1504926912.809949,VS0,VE5',
+98 silly get     'x-timer': 'S1504927276.738766,VS0,VE0',
 98 silly get     vary: 'Accept-Encoding, Accept' } ]
 99 verbose etag https://registry.npmjs.org/bindings from cache
 100 verbose get saving bindings to C:\Users\Sean\AppData\Roaming\npm-cache\registry.npmjs.org\bindings\.cache.json
@@ -240,28 +240,28 @@
 122 verbose correctMkdir C:\Users\Sean\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
 123 verbose afterAdd C:\Users\Sean\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json written
 124 http 304 https://registry.npmjs.org/nan
-125 verbose headers { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+125 verbose headers { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 125 verbose headers   via: '1.1 varnish',
 125 verbose headers   'cache-control': 'max-age=300',
 125 verbose headers   etag: 'W/"59a60a0b-20228"',
-125 verbose headers   age: '135',
+125 verbose headers   age: '199',
 125 verbose headers   connection: 'keep-alive',
-125 verbose headers   'x-served-by': 'cache-ord1730-ORD',
+125 verbose headers   'x-served-by': 'cache-ord1733-ORD',
 125 verbose headers   'x-cache': 'HIT',
-125 verbose headers   'x-cache-hits': '1',
-125 verbose headers   'x-timer': 'S1504926912.860970,VS0,VE0',
+125 verbose headers   'x-cache-hits': '2',
+125 verbose headers   'x-timer': 'S1504927276.786740,VS0,VE0',
 125 verbose headers   vary: 'Accept-Encoding, Accept' }
 126 silly get cb [ 304,
-126 silly get   { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+126 silly get   { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 126 silly get     via: '1.1 varnish',
 126 silly get     'cache-control': 'max-age=300',
 126 silly get     etag: 'W/"59a60a0b-20228"',
-126 silly get     age: '135',
+126 silly get     age: '199',
 126 silly get     connection: 'keep-alive',
-126 silly get     'x-served-by': 'cache-ord1730-ORD',
+126 silly get     'x-served-by': 'cache-ord1733-ORD',
 126 silly get     'x-cache': 'HIT',
-126 silly get     'x-cache-hits': '1',
-126 silly get     'x-timer': 'S1504926912.860970,VS0,VE0',
+126 silly get     'x-cache-hits': '2',
+126 silly get     'x-timer': 'S1504927276.786740,VS0,VE0',
 126 silly get     vary: 'Accept-Encoding, Accept' } ]
 127 verbose etag https://registry.npmjs.org/nan from cache
 128 verbose get saving nan to C:\Users\Sean\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
@@ -370,28 +370,28 @@
 150 verbose correctMkdir C:\Users\Sean\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
 151 verbose afterAdd C:\Users\Sean\AppData\Roaming\npm-cache\nan\2.7.0\package\package.json written
 152 http 304 https://registry.npmjs.org/ogg-packet
-153 verbose headers { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+153 verbose headers { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 153 verbose headers   via: '1.1 varnish',
 153 verbose headers   'cache-control': 'max-age=300',
 153 verbose headers   etag: 'W/"50bbbf05-122e"',
 153 verbose headers   age: '0',
 153 verbose headers   connection: 'keep-alive',
-153 verbose headers   'x-served-by': 'cache-ord1733-ORD',
+153 verbose headers   'x-served-by': 'cache-ord1731-ORD',
 153 verbose headers   'x-cache': 'HIT',
 153 verbose headers   'x-cache-hits': '1',
-153 verbose headers   'x-timer': 'S1504926912.859890,VS0,VE64',
+153 verbose headers   'x-timer': 'S1504927276.780185,VS0,VE117',
 153 verbose headers   vary: 'Accept-Encoding, Accept' }
 154 silly get cb [ 304,
-154 silly get   { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+154 silly get   { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 154 silly get     via: '1.1 varnish',
 154 silly get     'cache-control': 'max-age=300',
 154 silly get     etag: 'W/"50bbbf05-122e"',
 154 silly get     age: '0',
 154 silly get     connection: 'keep-alive',
-154 silly get     'x-served-by': 'cache-ord1733-ORD',
+154 silly get     'x-served-by': 'cache-ord1731-ORD',
 154 silly get     'x-cache': 'HIT',
 154 silly get     'x-cache-hits': '1',
-154 silly get     'x-timer': 'S1504926912.859890,VS0,VE64',
+154 silly get     'x-timer': 'S1504927276.780185,VS0,VE117',
 154 silly get     vary: 'Accept-Encoding, Accept' } ]
 155 verbose etag https://registry.npmjs.org/ogg-packet from cache
 156 verbose get saving ogg-packet to C:\Users\Sean\AppData\Roaming\npm-cache\registry.npmjs.org\ogg-packet\.cache.json
@@ -447,33 +447,33 @@
 185 silly mapToRegistry uri https://registry.npmjs.org/ref-struct
 186 verbose request uri https://registry.npmjs.org/ref-struct
 187 verbose request no auth needed
-188 info attempt registry request try #1 at 10:15:12 PM
+188 info attempt registry request try #1 at 10:21:16 PM
 189 verbose etag W/"591436e6-412b"
 190 verbose lastModified Thu, 11 May 2017 10:03:18 GMT
 191 http request GET https://registry.npmjs.org/ref-struct
 192 http 304 https://registry.npmjs.org/ref-struct
-193 verbose headers { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+193 verbose headers { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 193 verbose headers   via: '1.1 varnish',
 193 verbose headers   'cache-control': 'max-age=300',
 193 verbose headers   etag: 'W/"591436e6-412b"',
 193 verbose headers   age: '0',
 193 verbose headers   connection: 'keep-alive',
-193 verbose headers   'x-served-by': 'cache-ord1737-ORD',
+193 verbose headers   'x-served-by': 'cache-ord1725-ORD',
 193 verbose headers   'x-cache': 'HIT',
 193 verbose headers   'x-cache-hits': '1',
-193 verbose headers   'x-timer': 'S1504926912.964220,VS0,VE54',
+193 verbose headers   'x-timer': 'S1504927276.929257,VS0,VE119',
 193 verbose headers   vary: 'Accept-Encoding, Accept' }
 194 silly get cb [ 304,
-194 silly get   { date: 'Sat, 09 Sep 2017 03:15:11 GMT',
+194 silly get   { date: 'Sat, 09 Sep 2017 03:21:15 GMT',
 194 silly get     via: '1.1 varnish',
 194 silly get     'cache-control': 'max-age=300',
 194 silly get     etag: 'W/"591436e6-412b"',
 194 silly get     age: '0',
 194 silly get     connection: 'keep-alive',
-194 silly get     'x-served-by': 'cache-ord1737-ORD',
+194 silly get     'x-served-by': 'cache-ord1725-ORD',
 194 silly get     'x-cache': 'HIT',
 194 silly get     'x-cache-hits': '1',
-194 silly get     'x-timer': 'S1504926912.964220,VS0,VE54',
+194 silly get     'x-timer': 'S1504927276.929257,VS0,VE119',
 194 silly get     vary: 'Accept-Encoding, Accept' } ]
 195 verbose etag https://registry.npmjs.org/ref-struct from cache
 196 verbose get saving ref-struct to C:\Users\Sean\AppData\Roaming\npm-cache\registry.npmjs.org\ref-struct\.cache.json
@@ -553,39 +553,39 @@
 231 silly mapToRegistry uri https://registry.npmjs.org/ref
 232 verbose request uri https://registry.npmjs.org/debug
 233 verbose request no auth needed
-234 info attempt registry request try #1 at 10:15:12 PM
+234 info attempt registry request try #1 at 10:21:16 PM
 235 verbose etag W/"59b2fff5-17e42"
 236 verbose lastModified Fri, 08 Sep 2017 20:39:17 GMT
 237 http request GET https://registry.npmjs.org/debug
 238 verbose request uri https://registry.npmjs.org/ref
 239 verbose request no auth needed
-240 info attempt registry request try #1 at 10:15:12 PM
+240 info attempt registry request try #1 at 10:21:16 PM
 241 verbose etag W/"59a59802-f8c3"
 242 verbose lastModified Tue, 29 Aug 2017 16:36:18 GMT
 243 http request GET https://registry.npmjs.org/ref
 244 http 304 https://registry.npmjs.org/debug
-245 verbose headers { date: 'Sat, 09 Sep 2017 03:15:12 GMT',
+245 verbose headers { date: 'Sat, 09 Sep 2017 03:21:16 GMT',
 245 verbose headers   via: '1.1 varnish',
 245 verbose headers   'cache-control': 'max-age=300',
 245 verbose headers   etag: 'W/"59b2fff5-17e42"',
-245 verbose headers   age: '234',
+245 verbose headers   age: '289',
 245 verbose headers   connection: 'keep-alive',
-245 verbose headers   'x-served-by': 'cache-ord1730-ORD',
+245 verbose headers   'x-served-by': 'cache-ord1733-ORD',
 245 verbose headers   'x-cache': 'HIT',
-245 verbose headers   'x-cache-hits': '3',
-245 verbose headers   'x-timer': 'S1504926912.051618,VS0,VE0',
+245 verbose headers   'x-cache-hits': '6',
+245 verbose headers   'x-timer': 'S1504927276.085305,VS0,VE0',
 245 verbose headers   vary: 'Accept-Encoding, Accept' }
 246 silly get cb [ 304,
-246 silly get   { date: 'Sat, 09 Sep 2017 03:15:12 GMT',
+246 silly get   { date: 'Sat, 09 Sep 2017 03:21:16 GMT',
 246 silly get     via: '1.1 varnish',
 246 silly get     'cache-control': 'max-age=300',
 246 silly get     etag: 'W/"59b2fff5-17e42"',
-246 silly get     age: '234',
+246 silly get     age: '289',
 246 silly get     connection: 'keep-alive',
-246 silly get     'x-served-by': 'cache-ord1730-ORD',
+246 silly get     'x-served-by': 'cache-ord1733-ORD',
 246 silly get     'x-cache': 'HIT',
-246 silly get     'x-cache-hits': '3',
-246 silly get     'x-timer': 'S1504926912.051618,VS0,VE0',
+246 silly get     'x-cache-hits': '6',
+246 silly get     'x-timer': 'S1504927276.085305,VS0,VE0',
 246 silly get     vary: 'Accept-Encoding, Accept' } ]
 247 verbose etag https://registry.npmjs.org/debug from cache
 248 verbose get saving debug to C:\Users\Sean\AppData\Roaming\npm-cache\registry.npmjs.org\debug\.cache.json
@@ -678,28 +678,28 @@
 270 verbose correctMkdir C:\Users\Sean\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
 271 verbose afterAdd C:\Users\Sean\AppData\Roaming\npm-cache\debug\2.6.8\package\package.json written
 272 http 304 https://registry.npmjs.org/ref
-273 verbose headers { date: 'Sat, 09 Sep 2017 03:15:12 GMT',
+273 verbose headers { date: 'Sat, 09 Sep 2017 03:21:16 GMT',
 273 verbose headers   via: '1.1 varnish',
 273 verbose headers   'cache-control': 'max-age=300',
 273 verbose headers   etag: 'W/"59a59802-f8c3"',
 273 verbose headers   age: '0',
 273 verbose headers   connection: 'keep-alive',
-273 verbose headers   'x-served-by': 'cache-ord1733-ORD',
+273 verbose headers   'x-served-by': 'cache-ord1731-ORD',
 273 verbose headers   'x-cache': 'HIT',
 273 verbose headers   'x-cache-hits': '1',
-273 verbose headers   'x-timer': 'S1504926912.056371,VS0,VE56',
+273 verbose headers   'x-timer': 'S1504927276.084527,VS0,VE124',
 273 verbose headers   vary: 'Accept-Encoding, Accept' }
 274 silly get cb [ 304,
-274 silly get   { date: 'Sat, 09 Sep 2017 03:15:12 GMT',
+274 silly get   { date: 'Sat, 09 Sep 2017 03:21:16 GMT',
 274 silly get     via: '1.1 varnish',
 274 silly get     'cache-control': 'max-age=300',
 274 silly get     etag: 'W/"59a59802-f8c3"',
 274 silly get     age: '0',
 274 silly get     connection: 'keep-alive',
-274 silly get     'x-served-by': 'cache-ord1733-ORD',
+274 silly get     'x-served-by': 'cache-ord1731-ORD',
 274 silly get     'x-cache': 'HIT',
 274 silly get     'x-cache-hits': '1',
-274 silly get     'x-timer': 'S1504926912.056371,VS0,VE56',
+274 silly get     'x-timer': 'S1504927276.084527,VS0,VE124',
 274 silly get     vary: 'Accept-Encoding, Accept' } ]
 275 verbose etag https://registry.npmjs.org/ref from cache
 276 verbose get saving ref to C:\Users\Sean\AppData\Roaming\npm-cache\registry.npmjs.org\ref\.cache.json
@@ -803,33 +803,33 @@
 305 silly mapToRegistry uri https://registry.npmjs.org/ms
 306 verbose request uri https://registry.npmjs.org/ms
 307 verbose request no auth needed
-308 info attempt registry request try #1 at 10:15:12 PM
+308 info attempt registry request try #1 at 10:21:16 PM
 309 verbose etag W/"59b1ad9f-3c23"
 310 verbose lastModified Thu, 07 Sep 2017 20:35:43 GMT
 311 http request GET https://registry.npmjs.org/ms
 312 http 304 https://registry.npmjs.org/ms
-313 verbose headers { date: 'Sat, 09 Sep 2017 03:15:12 GMT',
+313 verbose headers { date: 'Sat, 09 Sep 2017 03:21:16 GMT',
 313 verbose headers   via: '1.1 varnish',
 313 verbose headers   'cache-control': 'max-age=300',
 313 verbose headers   etag: 'W/"59b1ad9f-3c23"',
-313 verbose headers   age: '17',
+313 verbose headers   age: '79',
 313 verbose headers   connection: 'keep-alive',
-313 verbose headers   'x-served-by': 'cache-ord1737-ORD',
+313 verbose headers   'x-served-by': 'cache-ord1725-ORD',
 313 verbose headers   'x-cache': 'HIT',
 313 verbose headers   'x-cache-hits': '1',
-313 verbose headers   'x-timer': 'S1504926912.147843,VS0,VE1',
+313 verbose headers   'x-timer': 'S1504927276.250498,VS0,VE1',
 313 verbose headers   vary: 'Accept-Encoding, Accept' }
 314 silly get cb [ 304,
-314 silly get   { date: 'Sat, 09 Sep 2017 03:15:12 GMT',
+314 silly get   { date: 'Sat, 09 Sep 2017 03:21:16 GMT',
 314 silly get     via: '1.1 varnish',
 314 silly get     'cache-control': 'max-age=300',
 314 silly get     etag: 'W/"59b1ad9f-3c23"',
-314 silly get     age: '17',
+314 silly get     age: '79',
 314 silly get     connection: 'keep-alive',
-314 silly get     'x-served-by': 'cache-ord1737-ORD',
+314 silly get     'x-served-by': 'cache-ord1725-ORD',
 314 silly get     'x-cache': 'HIT',
 314 silly get     'x-cache-hits': '1',
-314 silly get     'x-timer': 'S1504926912.147843,VS0,VE1',
+314 silly get     'x-timer': 'S1504927276.250498,VS0,VE1',
 314 silly get     vary: 'Accept-Encoding, Accept' } ]
 315 verbose etag https://registry.npmjs.org/ms from cache
 316 verbose get saving ms to C:\Users\Sean\AppData\Roaming\npm-cache\registry.npmjs.org\ms\.cache.json
@@ -986,250 +986,250 @@
 429 silly extract ref-struct@1.1.0
 430 silly extract ogg-packet@1.0.0
 431 silly extract node-opus@0.2.6
-432 verbose unbuild node_modules\.staging\ms-d6b0ed01
-433 verbose unbuild node_modules\.staging\debug-30672bdf
-434 verbose unbuild node_modules\.staging\bindings-015ee8a3
-435 verbose unbuild node_modules\.staging\ref-aaf370a8
-436 verbose unbuild node_modules\.staging\nan-5a5c922e
-437 verbose unbuild node_modules\.staging\ref-struct-a791504f
-438 verbose unbuild node_modules\.staging\ogg-packet-528cb692
-439 verbose unbuild node_modules\.staging\node-opus-5e4c1baf
-440 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01 is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
-441 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01
-442 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
-443 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf
-444 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3 is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
-445 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3
-446 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8 is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
-447 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8
-448 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
-449 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e
-450 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\ms\2.0.0\package.tgz
-451 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01
-452 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01 is being purged
-453 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01
-454 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\debug\2.6.8\package.tgz
-455 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf
-456 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf is being purged
-457 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf
-458 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
-459 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f
-460 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
-461 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3
-462 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3 is being purged
-463 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3
-464 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\ref\1.3.5\package.tgz
-465 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8
-466 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8 is being purged
-467 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8
-468 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\nan\2.7.0\package.tgz
-469 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e
-470 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e is being purged
-471 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e
-472 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692 is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
-473 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692
-474 silly gunzTarPerm modes [ '777', '666' ]
-475 silly gunzTarPerm modes [ '777', '666' ]
-476 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\ref-struct\1.1.0\package.tgz
-477 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f
-478 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f is being purged
-479 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f
+432 verbose unbuild node_modules\.staging\bindings-015ee8a3
+433 verbose unbuild node_modules\.staging\ms-d6b0ed01
+434 verbose unbuild node_modules\.staging\nan-5a5c922e
+435 verbose unbuild node_modules\.staging\node-opus-5e4c1baf
+436 verbose unbuild node_modules\.staging\debug-30672bdf
+437 verbose unbuild node_modules\.staging\ref-aaf370a8
+438 verbose unbuild node_modules\.staging\ref-struct-a791504f
+439 verbose unbuild node_modules\.staging\ogg-packet-528cb692
+440 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3 is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
+441 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3
+442 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01 is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
+443 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01
+444 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
+445 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e
+446 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
+447 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf
+448 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
+449 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf
+450 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8 is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
+451 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8
+452 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+453 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3
+454 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3 is being purged
+455 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3
+456 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
+457 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f
+458 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\ms\2.0.0\package.tgz
+459 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01
+460 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01 is being purged
+461 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01
+462 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\nan\2.7.0\package.tgz
+463 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e
+464 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e is being purged
+465 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e
+466 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\node-opus\0.2.6\package.tgz
+467 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf
+468 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf is being purged
+469 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf
+470 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692 is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
+471 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692
+472 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\debug\2.6.8\package.tgz
+473 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf
+474 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf is being purged
+475 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf
+476 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\ref\1.3.5\package.tgz
+477 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8
+478 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8 is being purged
+479 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8
 480 silly gunzTarPerm modes [ '777', '666' ]
-481 silly gunzTarPerm modes [ '777', '666' ]
-482 silly gunzTarPerm modes [ '777', '666' ]
-483 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\ogg-packet\1.0.0\package.tgz
-484 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692
-485 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692 is being purged
-486 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692
-487 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf is being purged from base C:\Users\Sean\Documents\GitHub\SalmonSounds
-488 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf
-489 silly gunzTarPerm modes [ '777', '666' ]
-490 silly gunzTarPerm modes [ '777', '666' ]
-491 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\node-opus\0.2.6\package.tgz
-492 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf
-493 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf is being purged
-494 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\node-opus-5e4c1baf
+481 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\ref-struct\1.1.0\package.tgz
+482 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f
+483 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f is being purged
+484 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f
+485 silly gunzTarPerm modes [ '777', '666' ]
+486 silly gunzTarPerm modes [ '777', '666' ]
+487 silly gunzTarPerm modes [ '777', '666' ]
+488 verbose tar unpack C:\Users\Sean\AppData\Roaming\npm-cache\ogg-packet\1.0.0\package.tgz
+489 verbose tar unpacking to C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692
+490 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692 is being purged
+491 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692
+492 silly gunzTarPerm modes [ '777', '666' ]
+493 silly gunzTarPerm modes [ '777', '666' ]
+494 silly gunzTarPerm modes [ '777', '666' ]
 495 silly gunzTarPerm modes [ '777', '666' ]
 496 silly gunzTarPerm extractEntry package.json
 497 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
 498 silly gunzTarPerm extractEntry package.json
-499 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+499 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
 500 silly gunzTarPerm extractEntry package.json
 501 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
 502 silly gunzTarPerm extractEntry package.json
-503 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+503 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
 504 silly gunzTarPerm extractEntry package.json
-505 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+505 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
 506 silly gunzTarPerm extractEntry package.json
 507 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
 508 silly gunzTarPerm extractEntry package.json
 509 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
 510 silly gunzTarPerm extractEntry package.json
-511 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+511 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
 512 silly gunzTarPerm extractEntry index.js
 513 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
 514 silly gunzTarPerm extractEntry license.md
 515 silly gunzTarPerm modified mode [ 'license.md', 420, 438 ]
-516 silly gunzTarPerm extractEntry .npmignore
-517 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+516 silly gunzTarPerm extractEntry README.md
+517 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
 518 silly gunzTarPerm extractEntry README.md
 519 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
-520 silly gunzTarPerm extractEntry README.md
-521 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
-522 silly gunzTarPerm extractEntry bindings.js
-523 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
-524 silly gunzTarPerm extractEntry .npmignore
-525 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
-526 silly gunzTarPerm extractEntry README.md
-527 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+520 silly gunzTarPerm extractEntry bindings.js
+521 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
+522 silly gunzTarPerm extractEntry .npmignore
+523 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+524 silly gunzTarPerm extractEntry README.md
+525 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+526 silly gunzTarPerm extractEntry .npmignore
+527 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
 528 silly gunzTarPerm extractEntry README.md
-529 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
-530 silly gunzTarPerm extractEntry include_dirs.js
-531 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
-532 silly gunzTarPerm extractEntry .npmignore
-533 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
-534 silly gunzTarPerm extractEntry README.md
-535 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+529 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+530 silly gunzTarPerm extractEntry .npmignore
+531 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+532 silly gunzTarPerm extractEntry README.md
+533 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+534 silly gunzTarPerm extractEntry include_dirs.js
+535 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
 536 silly gunzTarPerm extractEntry .npmignore
 537 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
 538 silly gunzTarPerm extractEntry README.md
 539 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
 540 silly gunzTarPerm extractEntry .npmignore
-541 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+541 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
 542 silly gunzTarPerm extractEntry README.md
-543 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
-544 silly gunzTarPerm extractEntry readme.md
-545 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+543 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+544 silly gunzTarPerm extractEntry index.js
+545 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
 546 silly gunzTarPerm extractEntry LICENSE
 547 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
-548 silly gunzTarPerm extractEntry appveyor.yml
-549 silly gunzTarPerm modified mode [ 'appveyor.yml', 420, 438 ]
-550 silly gunzTarPerm extractEntry binding.gyp
-551 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
-552 silly gunzTarPerm extractEntry .jshintrc
-553 silly gunzTarPerm modified mode [ '.jshintrc', 420, 438 ]
-554 silly gunzTarPerm extractEntry .travis.yml
-555 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
-556 silly gunzTarPerm extractEntry nan_converters_43_inl.h
-557 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
-558 silly gunzTarPerm extractEntry LICENSE.md
-559 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
-560 silly gunzTarPerm extractEntry doc/new.md
-561 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+548 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+549 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
+550 silly gunzTarPerm extractEntry LICENSE.md
+551 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+552 silly gunzTarPerm extractEntry doc/new.md
+553 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+554 silly gunzTarPerm extractEntry readme.md
+555 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+556 silly gunzTarPerm extractEntry .jshintrc
+557 silly gunzTarPerm modified mode [ '.jshintrc', 420, 438 ]
+558 silly gunzTarPerm extractEntry .travis.yml
+559 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+560 silly gunzTarPerm extractEntry LICENSE
+561 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
 562 silly gunzTarPerm extractEntry index.js
-563 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+563 silly gunzTarPerm modified mode [ 'index.js', 436, 438 ]
 564 silly gunzTarPerm extractEntry doc/asyncworker.md
 565 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
-566 silly gunzTarPerm extractEntry LICENSE
-567 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
-568 silly gunzTarPerm extractEntry index.js
-569 silly gunzTarPerm modified mode [ 'index.js', 436, 438 ]
-570 silly gunzTarPerm extractEntry karma.conf.js
-571 silly gunzTarPerm modified mode [ 'karma.conf.js', 420, 438 ]
-572 silly gunzTarPerm extractEntry node.js
-573 silly gunzTarPerm modified mode [ 'node.js', 420, 438 ]
-574 silly gunzTarPerm extractEntry Makefile
-575 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
-576 silly gunzTarPerm extractEntry .coveralls.yml
-577 silly gunzTarPerm modified mode [ '.coveralls.yml', 420, 438 ]
-578 silly gunzTarPerm extractEntry .travis.yml
-579 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
-580 silly gunzTarPerm extractEntry docs/compile.js
-581 silly gunzTarPerm modified mode [ 'docs/compile.js', 420, 438 ]
-582 silly gunzTarPerm extractEntry History.md
-583 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
-584 silly gunzTarPerm extractEntry appveyor.yml
-585 silly gunzTarPerm modified mode [ 'appveyor.yml', 420, 438 ]
-586 silly gunzTarPerm extractEntry doc/callback.md
-587 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
-588 silly gunzTarPerm extractEntry doc/converters.md
-589 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
-590 silly gunzTarPerm extractEntry examples/mp3-to-ogg.js
-591 silly gunzTarPerm modified mode [ 'examples/mp3-to-ogg.js', 436, 438 ]
-592 silly gunzTarPerm extractEntry examples/stream-to-alsa.js
-593 silly gunzTarPerm modified mode [ 'examples/stream-to-alsa.js', 436, 438 ]
-594 silly gunzTarPerm extractEntry .eslintrc
-595 silly gunzTarPerm modified mode [ '.eslintrc', 420, 438 ]
-596 silly gunzTarPerm extractEntry component.json
-597 silly gunzTarPerm modified mode [ 'component.json', 420, 438 ]
-598 silly gunzTarPerm extractEntry lib/struct.js
-599 silly gunzTarPerm modified mode [ 'lib/struct.js', 420, 438 ]
-600 silly gunzTarPerm extractEntry doc/errors.md
-601 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
-602 silly gunzTarPerm extractEntry doc/json.md
-603 silly gunzTarPerm modified mode [ 'doc/json.md', 436, 438 ]
-604 silly gunzTarPerm extractEntry deps/binding.gyp
-605 silly gunzTarPerm modified mode [ 'deps/binding.gyp', 436, 438 ]
-606 silly gunzTarPerm extractEntry docs/gh-pages.sh
-607 silly gunzTarPerm modified mode [ 'docs/gh-pages.sh', 493, 511 ]
+566 silly gunzTarPerm extractEntry appveyor.yml
+567 silly gunzTarPerm modified mode [ 'appveyor.yml', 420, 438 ]
+568 silly gunzTarPerm extractEntry binding.gyp
+569 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+570 silly gunzTarPerm extractEntry History.md
+571 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
+572 silly gunzTarPerm extractEntry appveyor.yml
+573 silly gunzTarPerm modified mode [ 'appveyor.yml', 420, 438 ]
+574 silly gunzTarPerm extractEntry karma.conf.js
+575 silly gunzTarPerm modified mode [ 'karma.conf.js', 420, 438 ]
+576 silly gunzTarPerm extractEntry node.js
+577 silly gunzTarPerm modified mode [ 'node.js', 420, 438 ]
+578 silly gunzTarPerm extractEntry Makefile
+579 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+580 silly gunzTarPerm extractEntry .travis.yml
+581 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+582 silly gunzTarPerm extractEntry docs/compile.js
+583 silly gunzTarPerm modified mode [ 'docs/compile.js', 420, 438 ]
+584 silly gunzTarPerm extractEntry examples/mp3-to-ogg.js
+585 silly gunzTarPerm modified mode [ 'examples/mp3-to-ogg.js', 436, 438 ]
+586 silly gunzTarPerm extractEntry examples/stream-to-alsa.js
+587 silly gunzTarPerm modified mode [ 'examples/stream-to-alsa.js', 436, 438 ]
+588 silly gunzTarPerm extractEntry .coveralls.yml
+589 silly gunzTarPerm modified mode [ '.coveralls.yml', 420, 438 ]
+590 silly gunzTarPerm extractEntry doc/callback.md
+591 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+592 silly gunzTarPerm extractEntry doc/converters.md
+593 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+594 silly gunzTarPerm extractEntry lib/struct.js
+595 silly gunzTarPerm modified mode [ 'lib/struct.js', 420, 438 ]
+596 silly gunzTarPerm extractEntry doc/errors.md
+597 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+598 silly gunzTarPerm extractEntry doc/json.md
+599 silly gunzTarPerm modified mode [ 'doc/json.md', 436, 438 ]
+600 silly gunzTarPerm extractEntry deps/binding.gyp
+601 silly gunzTarPerm modified mode [ 'deps/binding.gyp', 436, 438 ]
+602 silly gunzTarPerm extractEntry docs/gh-pages.sh
+603 silly gunzTarPerm modified mode [ 'docs/gh-pages.sh', 493, 511 ]
+604 silly gunzTarPerm extractEntry .eslintrc
+605 silly gunzTarPerm modified mode [ '.eslintrc', 420, 438 ]
+606 silly gunzTarPerm extractEntry component.json
+607 silly gunzTarPerm modified mode [ 'component.json', 420, 438 ]
 608 silly gunzTarPerm extractEntry deps/config/opus/freebsd/x64/config.h
 609 silly gunzTarPerm modified mode [ 'deps/config/opus/freebsd/x64/config.h', 436, 438 ]
-610 silly gunzTarPerm extractEntry .travis.yml
-611 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
-612 silly gunzTarPerm extractEntry CHANGELOG.md
-613 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
-614 silly gunzTarPerm extractEntry doc/maybe_types.md
-615 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
-616 silly gunzTarPerm extractEntry doc/methods.md
-617 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
-618 silly gunzTarPerm extractEntry deps/config/opus/linux/arm/config.h
-619 silly gunzTarPerm modified mode [ 'deps/config/opus/linux/arm/config.h', 436, 438 ]
-620 silly gunzTarPerm extractEntry deps/config/opus/linux/ia32/config.h
-621 silly gunzTarPerm modified mode [ 'deps/config/opus/linux/ia32/config.h', 436, 438 ]
-622 silly gunzTarPerm extractEntry docs/images/apple-touch-icon-114x114.png
-623 silly gunzTarPerm modified mode [ 'docs/images/apple-touch-icon-114x114.png', 420, 438 ]
-624 silly gunzTarPerm extractEntry docs/images/apple-touch-icon-72x72.png
-625 silly gunzTarPerm modified mode [ 'docs/images/apple-touch-icon-72x72.png', 420, 438 ]
+610 silly gunzTarPerm extractEntry doc/maybe_types.md
+611 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+612 silly gunzTarPerm extractEntry doc/methods.md
+613 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+614 silly gunzTarPerm extractEntry deps/config/opus/linux/arm/config.h
+615 silly gunzTarPerm modified mode [ 'deps/config/opus/linux/arm/config.h', 436, 438 ]
+616 silly gunzTarPerm extractEntry deps/config/opus/linux/ia32/config.h
+617 silly gunzTarPerm modified mode [ 'deps/config/opus/linux/ia32/config.h', 436, 438 ]
+618 silly gunzTarPerm extractEntry docs/images/apple-touch-icon-114x114.png
+619 silly gunzTarPerm modified mode [ 'docs/images/apple-touch-icon-114x114.png', 420, 438 ]
+620 silly gunzTarPerm extractEntry docs/images/apple-touch-icon-72x72.png
+621 silly gunzTarPerm modified mode [ 'docs/images/apple-touch-icon-72x72.png', 420, 438 ]
+622 silly gunzTarPerm extractEntry .travis.yml
+623 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+624 silly gunzTarPerm extractEntry CHANGELOG.md
+625 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
 626 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3\node_modules is being purged
 627 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\bindings-015ee8a3\node_modules
-628 silly gunzTarPerm extractEntry doc/buffers.md
-629 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
-630 silly gunzTarPerm extractEntry doc/node_misc.md
-631 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
-632 silly gunzTarPerm extractEntry src/browser.js
-633 silly gunzTarPerm modified mode [ 'src/browser.js', 420, 438 ]
-634 silly gunzTarPerm extractEntry src/debug.js
-635 silly gunzTarPerm modified mode [ 'src/debug.js', 420, 438 ]
-636 silly gunzTarPerm extractEntry deps/config/opus/linux/x64/config.h
-637 silly gunzTarPerm modified mode [ 'deps/config/opus/linux/x64/config.h', 436, 438 ]
-638 silly gunzTarPerm extractEntry deps/config/opus/mac/x64/config.h
-639 silly gunzTarPerm modified mode [ 'deps/config/opus/mac/x64/config.h', 436, 438 ]
-640 silly gunzTarPerm extractEntry docs/images/apple-touch-icon.png
-641 silly gunzTarPerm modified mode [ 'docs/images/apple-touch-icon.png', 420, 438 ]
-642 silly gunzTarPerm extractEntry docs/images/favicon.ico
-643 silly gunzTarPerm modified mode [ 'docs/images/favicon.ico', 420, 438 ]
-644 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01\node_modules is being purged
-645 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01\node_modules
-646 silly gunzTarPerm extractEntry src/index.js
-647 silly gunzTarPerm modified mode [ 'src/index.js', 420, 438 ]
-648 silly gunzTarPerm extractEntry src/node.js
-649 silly gunzTarPerm modified mode [ 'src/node.js', 420, 438 ]
-650 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692\node_modules is being purged
-651 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692\node_modules
-652 silly gunzTarPerm extractEntry doc/object_wrappers.md
-653 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 438 ]
-654 silly gunzTarPerm extractEntry doc/persistent.md
-655 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
-656 silly gunzTarPerm extractEntry docs/images/ref.pxm
-657 silly gunzTarPerm modified mode [ 'docs/images/ref.pxm', 420, 438 ]
-658 silly gunzTarPerm extractEntry docs/index.jade
-659 silly gunzTarPerm modified mode [ 'docs/index.jade', 420, 438 ]
-660 silly gunzTarPerm extractEntry deps/config/opus/win/x64/config.h
-661 silly gunzTarPerm modified mode [ 'deps/config/opus/win/x64/config.h', 436, 438 ]
-662 silly gunzTarPerm extractEntry deps/config/opus/win/x64/version.h
-663 silly gunzTarPerm modified mode [ 'deps/config/opus/win/x64/version.h', 436, 438 ]
-664 silly gunzTarPerm extractEntry docs/scripts/jquery-1.7.2.min.js
-665 silly gunzTarPerm modified mode [ 'docs/scripts/jquery-1.7.2.min.js', 420, 438 ]
-666 silly gunzTarPerm extractEntry docs/scripts/main.js
-667 silly gunzTarPerm modified mode [ 'docs/scripts/main.js', 420, 438 ]
-668 silly gunzTarPerm extractEntry doc/scopes.md
-669 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
-670 silly gunzTarPerm extractEntry doc/script.md
-671 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
-672 silly gunzTarPerm extractEntry deps/opus/README
-673 silly gunzTarPerm modified mode [ 'deps/opus/README', 436, 438 ]
-674 silly gunzTarPerm extractEntry deps/opus/depcomp
-675 silly gunzTarPerm modified mode [ 'deps/opus/depcomp', 493, 511 ]
+628 silly gunzTarPerm extractEntry docs/images/apple-touch-icon.png
+629 silly gunzTarPerm modified mode [ 'docs/images/apple-touch-icon.png', 420, 438 ]
+630 silly gunzTarPerm extractEntry docs/images/favicon.ico
+631 silly gunzTarPerm modified mode [ 'docs/images/favicon.ico', 420, 438 ]
+632 silly gunzTarPerm extractEntry deps/config/opus/linux/x64/config.h
+633 silly gunzTarPerm modified mode [ 'deps/config/opus/linux/x64/config.h', 436, 438 ]
+634 silly gunzTarPerm extractEntry deps/config/opus/mac/x64/config.h
+635 silly gunzTarPerm modified mode [ 'deps/config/opus/mac/x64/config.h', 436, 438 ]
+636 silly gunzTarPerm extractEntry doc/buffers.md
+637 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+638 silly gunzTarPerm extractEntry doc/node_misc.md
+639 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
+640 silly gunzTarPerm extractEntry src/browser.js
+641 silly gunzTarPerm modified mode [ 'src/browser.js', 420, 438 ]
+642 silly gunzTarPerm extractEntry src/debug.js
+643 silly gunzTarPerm modified mode [ 'src/debug.js', 420, 438 ]
+644 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692\node_modules is being purged
+645 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ogg-packet-528cb692\node_modules
+646 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01\node_modules is being purged
+647 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ms-d6b0ed01\node_modules
+648 silly gunzTarPerm extractEntry docs/images/ref.pxm
+649 silly gunzTarPerm modified mode [ 'docs/images/ref.pxm', 420, 438 ]
+650 silly gunzTarPerm extractEntry docs/index.jade
+651 silly gunzTarPerm modified mode [ 'docs/index.jade', 420, 438 ]
+652 silly gunzTarPerm extractEntry deps/config/opus/win/x64/config.h
+653 silly gunzTarPerm modified mode [ 'deps/config/opus/win/x64/config.h', 436, 438 ]
+654 silly gunzTarPerm extractEntry deps/config/opus/win/x64/version.h
+655 silly gunzTarPerm modified mode [ 'deps/config/opus/win/x64/version.h', 436, 438 ]
+656 silly gunzTarPerm extractEntry src/index.js
+657 silly gunzTarPerm modified mode [ 'src/index.js', 420, 438 ]
+658 silly gunzTarPerm extractEntry src/node.js
+659 silly gunzTarPerm modified mode [ 'src/node.js', 420, 438 ]
+660 silly gunzTarPerm extractEntry doc/object_wrappers.md
+661 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 438 ]
+662 silly gunzTarPerm extractEntry doc/persistent.md
+663 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
+664 silly gunzTarPerm extractEntry deps/opus/README
+665 silly gunzTarPerm modified mode [ 'deps/opus/README', 436, 438 ]
+666 silly gunzTarPerm extractEntry deps/opus/depcomp
+667 silly gunzTarPerm modified mode [ 'deps/opus/depcomp', 493, 511 ]
+668 silly gunzTarPerm extractEntry docs/scripts/jquery-1.7.2.min.js
+669 silly gunzTarPerm modified mode [ 'docs/scripts/jquery-1.7.2.min.js', 420, 438 ]
+670 silly gunzTarPerm extractEntry docs/scripts/main.js
+671 silly gunzTarPerm modified mode [ 'docs/scripts/main.js', 420, 438 ]
+672 silly gunzTarPerm extractEntry doc/scopes.md
+673 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
+674 silly gunzTarPerm extractEntry doc/script.md
+675 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
 676 silly gunzTarPerm extractEntry docs/stylesheets/base.css
 677 silly gunzTarPerm modified mode [ 'docs/stylesheets/base.css', 420, 438 ]
 678 silly gunzTarPerm extractEntry docs/stylesheets/layout.css
@@ -1278,88 +1278,88 @@
 721 silly gunzTarPerm modified mode [ 'test/object.js', 420, 438 ]
 722 silly gunzTarPerm extractEntry test/utf16le.bin
 723 silly gunzTarPerm modified mode [ 'test/utf16le.bin', 420, 438 ]
-724 silly gunzTarPerm extractEntry doc/v8_misc.md
-725 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
-726 silly gunzTarPerm extractEntry nan.h
-727 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
-728 silly gunzTarPerm extractEntry deps/opus/ChangeLog
-729 silly gunzTarPerm modified mode [ 'deps/opus/ChangeLog', 436, 438 ]
-730 silly gunzTarPerm extractEntry deps/opus/INSTALL
-731 silly gunzTarPerm modified mode [ 'deps/opus/INSTALL', 420, 438 ]
-732 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f\node_modules is being purged
-733 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f\node_modules
+724 silly gunzTarPerm extractEntry deps/opus/ChangeLog
+725 silly gunzTarPerm modified mode [ 'deps/opus/ChangeLog', 436, 438 ]
+726 silly gunzTarPerm extractEntry deps/opus/INSTALL
+727 silly gunzTarPerm modified mode [ 'deps/opus/INSTALL', 420, 438 ]
+728 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f\node_modules is being purged
+729 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-struct-a791504f\node_modules
+730 silly gunzTarPerm extractEntry doc/v8_misc.md
+731 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
+732 silly gunzTarPerm extractEntry nan.h
+733 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
 734 silly gunzTarPerm extractEntry nan_callbacks.h
 735 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 438 ]
-736 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
-737 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
-738 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
-739 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
-740 silly gunzTarPerm extractEntry nan_converters.h
-741 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
-742 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
-743 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
-744 silly gunzTarPerm extractEntry deps/opus/Makefile.am
-745 silly gunzTarPerm modified mode [ 'deps/opus/Makefile.am', 436, 438 ]
-746 silly gunzTarPerm extractEntry deps/opus/Makefile.in
-747 silly gunzTarPerm modified mode [ 'deps/opus/Makefile.in', 436, 438 ]
-748 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
-749 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
-750 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
-751 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
-752 silly gunzTarPerm extractEntry nan_json.h
-753 silly gunzTarPerm modified mode [ 'nan_json.h', 436, 438 ]
-754 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
-755 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
-756 silly gunzTarPerm extractEntry deps/opus/Makefile.mips
-757 silly gunzTarPerm modified mode [ 'deps/opus/Makefile.mips', 436, 438 ]
-758 silly gunzTarPerm extractEntry deps/opus/Makefile.unix
-759 silly gunzTarPerm modified mode [ 'deps/opus/Makefile.unix', 436, 438 ]
+736 silly gunzTarPerm extractEntry deps/opus/Makefile.am
+737 silly gunzTarPerm modified mode [ 'deps/opus/Makefile.am', 436, 438 ]
+738 silly gunzTarPerm extractEntry deps/opus/Makefile.in
+739 silly gunzTarPerm modified mode [ 'deps/opus/Makefile.in', 436, 438 ]
+740 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+741 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
+742 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+743 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
+744 silly gunzTarPerm extractEntry nan_converters.h
+745 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+746 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+747 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
+748 silly gunzTarPerm extractEntry deps/opus/Makefile.mips
+749 silly gunzTarPerm modified mode [ 'deps/opus/Makefile.mips', 436, 438 ]
+750 silly gunzTarPerm extractEntry deps/opus/Makefile.unix
+751 silly gunzTarPerm modified mode [ 'deps/opus/Makefile.unix', 436, 438 ]
+752 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+753 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+754 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+755 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+756 silly gunzTarPerm extractEntry nan_json.h
+757 silly gunzTarPerm modified mode [ 'nan_json.h', 436, 438 ]
+758 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+759 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
 760 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
 761 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 438 ]
 762 silly gunzTarPerm extractEntry nan_new.h
 763 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
-764 silly gunzTarPerm extractEntry nan_object_wrap.h
-765 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
-766 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
-767 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
-768 silly gunzTarPerm extractEntry deps/opus/NEWS
-769 silly gunzTarPerm modified mode [ 'deps/opus/NEWS', 436, 438 ]
-770 silly gunzTarPerm extractEntry deps/opus/AUTHORS
-771 silly gunzTarPerm modified mode [ 'deps/opus/AUTHORS', 436, 438 ]
-772 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
-773 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
-774 silly gunzTarPerm extractEntry nan_private.h
-775 silly gunzTarPerm modified mode [ 'nan_private.h', 436, 438 ]
-776 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf\node_modules is being purged
-777 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf\node_modules
-778 silly gunzTarPerm extractEntry nan_string_bytes.h
-779 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
-780 silly gunzTarPerm extractEntry nan_typedarray_contents.h
-781 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 438 ]
-782 silly gunzTarPerm extractEntry deps/opus/aclocal.m4
-783 silly gunzTarPerm modified mode [ 'deps/opus/aclocal.m4', 436, 438 ]
-784 silly gunzTarPerm extractEntry deps/opus/celt/laplace.c
-785 silly gunzTarPerm modified mode [ 'deps/opus/celt/laplace.c', 436, 438 ]
-786 silly gunzTarPerm extractEntry nan_weak.h
-787 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
-788 silly gunzTarPerm extractEntry CHANGELOG.md
-789 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
-790 silly gunzTarPerm extractEntry deps/opus/celt/_kiss_fft_guts.h
-791 silly gunzTarPerm modified mode [ 'deps/opus/celt/_kiss_fft_guts.h', 436, 438 ]
-792 silly gunzTarPerm extractEntry deps/opus/celt/arm/celt_pitch_xcorr_arm-gnu.S
-793 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/celt_pitch_xcorr_arm-gnu.S', 436, 438 ]
-794 silly gunzTarPerm extractEntry tools/package.json
-795 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
-796 silly gunzTarPerm extractEntry tools/README.md
-797 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
-798 silly gunzTarPerm extractEntry tools/1to2.js
-799 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
-800 silly gunzTarPerm extractEntry deps/opus/celt/arm/arm2gnu.pl
-801 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/arm2gnu.pl', 509, 511 ]
-802 silly gunzTarPerm extractEntry deps/opus/celt/arm/armcpu.c
-803 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/armcpu.c', 436, 438 ]
-804 silly gunzTarPerm extractEntry deps/opus/celt/arm/armcpu.h
-805 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/armcpu.h', 436, 438 ]
+764 silly gunzTarPerm extractEntry deps/opus/NEWS
+765 silly gunzTarPerm modified mode [ 'deps/opus/NEWS', 436, 438 ]
+766 silly gunzTarPerm extractEntry deps/opus/AUTHORS
+767 silly gunzTarPerm modified mode [ 'deps/opus/AUTHORS', 436, 438 ]
+768 silly gunzTarPerm extractEntry nan_object_wrap.h
+769 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
+770 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+771 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
+772 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf\node_modules is being purged
+773 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\debug-30672bdf\node_modules
+774 silly gunzTarPerm extractEntry deps/opus/aclocal.m4
+775 silly gunzTarPerm modified mode [ 'deps/opus/aclocal.m4', 436, 438 ]
+776 silly gunzTarPerm extractEntry deps/opus/celt/laplace.c
+777 silly gunzTarPerm modified mode [ 'deps/opus/celt/laplace.c', 436, 438 ]
+778 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+779 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
+780 silly gunzTarPerm extractEntry nan_private.h
+781 silly gunzTarPerm modified mode [ 'nan_private.h', 436, 438 ]
+782 silly gunzTarPerm extractEntry nan_string_bytes.h
+783 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+784 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+785 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 438 ]
+786 silly gunzTarPerm extractEntry deps/opus/celt/_kiss_fft_guts.h
+787 silly gunzTarPerm modified mode [ 'deps/opus/celt/_kiss_fft_guts.h', 436, 438 ]
+788 silly gunzTarPerm extractEntry deps/opus/celt/arm/celt_pitch_xcorr_arm-gnu.S
+789 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/celt_pitch_xcorr_arm-gnu.S', 436, 438 ]
+790 silly gunzTarPerm extractEntry nan_weak.h
+791 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
+792 silly gunzTarPerm extractEntry CHANGELOG.md
+793 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+794 silly gunzTarPerm extractEntry deps/opus/celt/arm/arm2gnu.pl
+795 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/arm2gnu.pl', 509, 511 ]
+796 silly gunzTarPerm extractEntry tools/package.json
+797 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
+798 silly gunzTarPerm extractEntry tools/README.md
+799 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
+800 silly gunzTarPerm extractEntry deps/opus/celt/arm/armcpu.c
+801 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/armcpu.c', 436, 438 ]
+802 silly gunzTarPerm extractEntry deps/opus/celt/arm/armcpu.h
+803 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/armcpu.h', 436, 438 ]
+804 silly gunzTarPerm extractEntry tools/1to2.js
+805 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
 806 silly gunzTarPerm extractEntry deps/opus/celt/arm/armopts.s.in
 807 silly gunzTarPerm modified mode [ 'deps/opus/celt/arm/armopts.s.in', 436, 438 ]
 808 silly gunzTarPerm extractEntry deps/opus/celt/arm/celt_ne10_fft.c
@@ -1458,22 +1458,22 @@
 901 silly gunzTarPerm modified mode [ 'deps/opus/celt/mips/pitch_mipsr1.h', 436, 438 ]
 902 silly gunzTarPerm extractEntry deps/opus/celt/mips/vq_mipsr1.h
 903 silly gunzTarPerm modified mode [ 'deps/opus/celt/mips/vq_mipsr1.h', 436, 438 ]
-904 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8\node_modules is being purged
-905 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8\node_modules
-906 silly gunzTarPerm extractEntry deps/opus/celt/modes.c
-907 silly gunzTarPerm modified mode [ 'deps/opus/celt/modes.c', 436, 438 ]
-908 silly gunzTarPerm extractEntry deps/opus/celt/modes.h
-909 silly gunzTarPerm modified mode [ 'deps/opus/celt/modes.h', 436, 438 ]
-910 silly gunzTarPerm extractEntry deps/opus/celt/opus_custom_demo.c
-911 silly gunzTarPerm modified mode [ 'deps/opus/celt/opus_custom_demo.c', 436, 438 ]
-912 silly gunzTarPerm extractEntry deps/opus/celt/os_support.h
-913 silly gunzTarPerm modified mode [ 'deps/opus/celt/os_support.h', 436, 438 ]
-914 silly gunzTarPerm extractEntry deps/opus/celt/pitch.c
-915 silly gunzTarPerm modified mode [ 'deps/opus/celt/pitch.c', 436, 438 ]
-916 silly gunzTarPerm extractEntry deps/opus/celt/pitch.h
-917 silly gunzTarPerm modified mode [ 'deps/opus/celt/pitch.h', 436, 438 ]
-918 silly gunzTarPerm extractEntry deps/opus/celt/quant_bands.c
-919 silly gunzTarPerm modified mode [ 'deps/opus/celt/quant_bands.c', 436, 438 ]
+904 silly gunzTarPerm extractEntry deps/opus/celt/modes.c
+905 silly gunzTarPerm modified mode [ 'deps/opus/celt/modes.c', 436, 438 ]
+906 silly gunzTarPerm extractEntry deps/opus/celt/modes.h
+907 silly gunzTarPerm modified mode [ 'deps/opus/celt/modes.h', 436, 438 ]
+908 silly gunzTarPerm extractEntry deps/opus/celt/opus_custom_demo.c
+909 silly gunzTarPerm modified mode [ 'deps/opus/celt/opus_custom_demo.c', 436, 438 ]
+910 silly gunzTarPerm extractEntry deps/opus/celt/os_support.h
+911 silly gunzTarPerm modified mode [ 'deps/opus/celt/os_support.h', 436, 438 ]
+912 silly gunzTarPerm extractEntry deps/opus/celt/pitch.c
+913 silly gunzTarPerm modified mode [ 'deps/opus/celt/pitch.c', 436, 438 ]
+914 silly gunzTarPerm extractEntry deps/opus/celt/pitch.h
+915 silly gunzTarPerm modified mode [ 'deps/opus/celt/pitch.h', 436, 438 ]
+916 silly gunzTarPerm extractEntry deps/opus/celt/quant_bands.c
+917 silly gunzTarPerm modified mode [ 'deps/opus/celt/quant_bands.c', 436, 438 ]
+918 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8\node_modules is being purged
+919 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\ref-aaf370a8\node_modules
 920 silly gunzTarPerm extractEntry deps/opus/celt/quant_bands.h
 921 silly gunzTarPerm modified mode [ 'deps/opus/celt/quant_bands.h', 436, 438 ]
 922 silly gunzTarPerm extractEntry deps/opus/celt/rate.c
@@ -1492,12 +1492,12 @@
 935 silly gunzTarPerm modified mode [ 'deps/opus/celt/static_modes_float_arm_ne10.h', 436, 438 ]
 936 silly gunzTarPerm extractEntry deps/opus/celt/tests/test_unit_cwrs32.c
 937 silly gunzTarPerm modified mode [ 'deps/opus/celt/tests/test_unit_cwrs32.c', 436, 438 ]
-938 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e\node_modules is being purged
-939 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e\node_modules
-940 silly gunzTarPerm extractEntry deps/opus/celt/tests/test_unit_dft.c
-941 silly gunzTarPerm modified mode [ 'deps/opus/celt/tests/test_unit_dft.c', 436, 438 ]
-942 silly gunzTarPerm extractEntry deps/opus/celt/tests/test_unit_entropy.c
-943 silly gunzTarPerm modified mode [ 'deps/opus/celt/tests/test_unit_entropy.c', 436, 438 ]
+938 silly gunzTarPerm extractEntry deps/opus/celt/tests/test_unit_dft.c
+939 silly gunzTarPerm modified mode [ 'deps/opus/celt/tests/test_unit_dft.c', 436, 438 ]
+940 silly gunzTarPerm extractEntry deps/opus/celt/tests/test_unit_entropy.c
+941 silly gunzTarPerm modified mode [ 'deps/opus/celt/tests/test_unit_entropy.c', 436, 438 ]
+942 silly gentlyRm C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e\node_modules is being purged
+943 verbose gentlyRm don't care about contents; nuking C:\Users\Sean\Documents\GitHub\SalmonSounds\node_modules\.staging\nan-5a5c922e\node_modules
 944 silly gunzTarPerm extractEntry deps/opus/celt/tests/test_unit_laplace.c
 945 silly gunzTarPerm modified mode [ 'deps/opus/celt/tests/test_unit_laplace.c', 436, 438 ]
 946 silly gunzTarPerm extractEntry deps/opus/celt/tests/test_unit_mathops.c
