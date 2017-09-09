@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 //gotta import that fancy config file
-const config = require("config.json").configuration;
+const config = require("./config.json").configuration;
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
