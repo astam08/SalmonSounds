@@ -17,10 +17,10 @@
     "Discord.js",
     "SalmonSounds"
   ],
-  "authors": [
-    "SalmonSeasoning",
-    "iComputer7"
-  ],
+  "authors": {
+    "SalmonSeasoning":"qualtersty@gmail.com",
+    "iComputer7":"seancale.sc@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SalmonSeasoning/SalmonSounds/issues"
