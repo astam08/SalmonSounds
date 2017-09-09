@@ -11,9 +11,11 @@
     <link rel="icon" href="Favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <div id="header">
+      <div id="logo"></div>
+    </div>
     <div class="jumbotron text-center">
   <h1>SalmonSounds Alpha</h1>
-  <p>(Website work in progress)</p>
 </div>
 
 <div class="container">
@@ -28,10 +30,10 @@
     </div>
     <div class="col-sm-4">
       <h3>Main Contributors</h3>
-      <ol>
+      <ul>
         <li>iComputer7</li>
         <li>SalmonSeasoning</li>
-      </ol>
+      </ul>
     </div>
   </div>
 </div>
@@ -39,5 +41,9 @@
   <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="popper.min.js"></script>
   <script type="text/javascript" src="bootstrap.min.js"></script>
-
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 </html>

@@ -1,0 +1,32 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+div#header{
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: #FFA500;
+}
+
+
+div#header > div#logo{
+  display: 'block';
+  width: 70vh;
+  height: 50vh;
+  background:#ffffff;
+  border-radius: 15px;
+
+  position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    background-image: url('salmon.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 2px -1px 0px #eee, 4px -2px 0px #ddd, 6px -3px 0px #ccc, 8px -4px 0px #bbb, 10px -5px 0px #aaa, 14px -6px 2px rgba(0,0,0,0.3);
+}
