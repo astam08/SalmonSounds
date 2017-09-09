@@ -1,5 +1,7 @@
 # SalmonSounds
 A Discord music bot made with Discord.js.
+## Invite official bot!
+[Click here to invite](https://discordapp.com/oauth2/authorize?client_id=355909071221817344&scope=bot&permissions=104190016)
 ## How to set up!
 1) Clone this repository<br>
 2) Install dependencies<br>
