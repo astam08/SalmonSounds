@@ -22,7 +22,7 @@ A Discord music bot made with Discord.js.
 ```
 {
   "configuration":{
-    "token":"MzU1OTA5MDcxMjIxODE3MzQ0.DJTpqQ.cw_kFbfBGl6L1q34YsVr8FwJBz4",
+    "token":"",
     "blacklisted-sites":[""],
     "custom-game":"",
     "status":"online",
