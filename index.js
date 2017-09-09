@@ -36,9 +36,12 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
 
         //Parser debug
         //message.channel.send(parsed);
+        var stream = ytdl(parsed, {filter: "audioonly"});
 
-        message.member.voiceChannel.join().then((connection) => {
-          connection.playStream(ytdl(parsed, {filter: "audioonly"})).on("end", ()=> {connection.disconnect();});
+        ytdl.on("info", (i, f) => {
+          message.member.voiceChannel.join().then((connection) => {
+            connection.playStream(stream).on("end", ()=> {connection.disconnect();});
+          });
         });
       }
     }
@@ -58,5 +61,6 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
 	}
 
 });
+
 
 client.login(config['token']);
