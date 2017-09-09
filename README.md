@@ -34,7 +34,8 @@ If you want to host SalmonSounds yourself, go right ahead! Just clone this repos
     "status":"online",
     "prefix":"!",
     "guild-invite-link":"https://discord.gg/245jNW8",
-    "botAdmins":[]
+    "botAdmins":[],
+    "enable-eval": true
   }
 }
 ```
@@ -45,4 +46,4 @@ If you want to host SalmonSounds yourself, go right ahead! Just clone this repos
 `prefix` is the prefix you want your bot to use. (default: `!`)<br>
 `guild-invite-link` is the invite link to your Discord server. Have fun!<br>
 `botAdmins` is an array which should contain user ID's. It gives access to the `eval` command and more.
-`enable-eval` should be either "true" or "false" it gives bot admins access to the eval command.
+`enable-eval` should be either `true` or `false` it gives bot admins access to the eval command.
