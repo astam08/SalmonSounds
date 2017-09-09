@@ -46,7 +46,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
 
   if (message.content.startsWith(config["prefix"] + "yt")) {
     if (message.member.voiceChannel) {
-      message.channel.send("You are in the voice channel " + message.member.voiceChannel.name);
+      message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
       if (message.member.voiceChannel.joinable) {
         var parser = message.content.split(" "), parsed = [];
         for (var i = 0; i <= parser.length; i++) {
@@ -58,7 +58,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
         parsed = parsed.substring(0, parsed.length - 1);
 
         //Parser debug
-        message.channel.send(parsed);
+        //message.channel.send(parsed);
 
         message.member.voiceChannel.join().then((connection) => {
           connection.playStream(ytdl(parsed, {filter: "audioonly"})).on("end", ()=> {connection.disconnect();});
