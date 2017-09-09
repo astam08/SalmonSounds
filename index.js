@@ -36,9 +36,18 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
       }
     }
   }
+
   if(message.content == config['prefix'] + 'invite'){
     message.channel.send('Here, join our server! ' + config['guild-invite-link']);
   }
+  if (message.content.toLowerCase() == config["prefix"] + "disconnect") {
+  	if (message.guild.voiceConnection) {
+  		message.guild.voiceConnection.dispatcher.end();
+  	} else {
+  		message.reply("I am not in a voice channel!");
+    }
+	}
+
 });
 
 client.login(config['token']);
