@@ -10,6 +10,13 @@ client.on("ready", () => {
   } else {
     client.user.setGame(config['custom-game']);
   }
+  console.log('SalmonSounds bot is successfully up and running!');
+});
+client.on("disconnect", () => {
+  console.log('Disconnected!');
+});
+client.on("reconnecting", ()=>{
+  console.log('Attempting to reconnect.');
 });
 
 client.on("message", (message) => { //eww these indents suck but i'm too lazy to change the setting
