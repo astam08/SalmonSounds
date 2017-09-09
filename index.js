@@ -1,8 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-//setting some basic aliases
-const bot = client;
-const discord = Discord;
 //gotta import that fancy config file
 const config = require("./config.json")['configuration'];
 
