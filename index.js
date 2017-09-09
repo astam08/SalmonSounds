@@ -85,7 +85,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
   		message.reply("I am not in a voice channel!");
     }
 	}
-  if(message.content == config['prefix'] + 'eval'){
+  if(message.content == config['prefix'] + 'eval' && config["enable-eval"]){
     if(!botAdmins.includes(message.author.id)) return;
     console.log(`EVAL RAN BY <${message.author}>: ${message.content.substring((config['prefix'] + 'eval').length)}`);
     eval(message.content.substring((config['prefix'] + 'eval').length));
