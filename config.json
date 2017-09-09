@@ -3,6 +3,7 @@
     "token":"",
     "blacklisted-sites":[""],
     "custom-game":"",
-    "status":"online"
+    "status":"online",
+    "prefix":"!"
   }
 }
