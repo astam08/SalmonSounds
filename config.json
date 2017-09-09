@@ -1,5 +1,8 @@
 {
   "configuration":{
-    "token":""
+    "token":"",
+    "blacklisted-sites":[""],
+    "custom-game":"",
+    "status":"online"
   }
 }
