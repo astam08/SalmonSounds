@@ -39,7 +39,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
           var stream = ytdl(parsed, {filter: "audioonly"});
           ytdl.getInfo(parsed).then((i, f) => {
             message.channel.send({embed: {
-              hexColor: "#ff5733", //TODO: Fix the color
+              color: 16753920,
               author: {
                 name: client.user.username,
                 icon_url: client.user.displayAvatarURL
@@ -65,14 +65,18 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
         } catch (e) {
           message.channel.send(e.message);
         }
+      } else {
+        message.reply("It seems that you are in a voice channel, but I can't join!");
       }
+    } else {
+      message.reply("You are not in a voice channel!");
     }
   }
 
   if(message.content == config['prefix'] + 'invite'){
     message.channel.send('Here, join our server! ' + config['guild-invite-link']);
   }
-  if (message.content.toLowerCase() == config["prefix"] + "disconnect") {
+  if (message.content.toLowerCase() == config["prefix"] + "stop") {
   	if (message.guild.voiceConnection) {
       message.guild.voiceConnection.disconnect();
   	} else {
