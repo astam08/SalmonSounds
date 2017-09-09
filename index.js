@@ -19,12 +19,6 @@ client.on("reconnecting", ()=>{
   console.log('Attempting to reconnect.');
 });
 
-client.on("guildCreate", (guild) => {
-  if(guild.available){
-    guild.defaultChannel.send('Hi! I am SalmonSounds!');
-  }
-});
-
 client.on("message", (message) => { //eww these indents suck but i'm too lazy to change the setting
   if (message.content.startsWith(config["prefix"] + "voice")) {
     if (message.member.voiceChannel) {
