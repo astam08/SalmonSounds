@@ -5,10 +5,10 @@ const config = require("./config.json").configuration;
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
-  if (config.custom-game == "") {
+  if (config.customgame == "") {
     client.user.setGame(config.prefix + "help");
   } else {
-    client.user.setGame(config.custom-game);
+    client.user.setGame(config.customgame);
   }
 });
 
