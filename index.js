@@ -38,7 +38,26 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
         //message.channel.send(parsed);
         var stream = ytdl(parsed, {filter: "audioonly"});
 
-        ytdl.on("info", (i, f) => {
+        ytdl.getInfo(parsed).then((i, f) => {
+          message.channel.send({embed: {
+            color: ff5733,
+            author: {
+              name: client.user.username,
+              icon_url: client.user.displayAvatarURL
+            },
+            fields: [
+              {
+                name: "Title",
+                value: i["title"],
+                inline: true
+              },
+              {
+                name: "Author",
+                value: i["author"]["name"],
+                inline: true
+              }
+            ]
+          });
           message.member.voiceChannel.join().then((connection) => {
             connection.playStream(stream).on("end", ()=> {connection.disconnect();});
           });
