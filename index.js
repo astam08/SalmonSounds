@@ -55,6 +55,16 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
                   name: "Author",
                   value: i["author"]["name"],
                   inline: true
+                },
+                {
+                  name: "Length (seconds)",
+                  value: i["length_seconds"],
+                  inline: true
+                },
+                {
+                  name: "Views",
+                  value: i["view_count"],
+                  inline: true
                 }
               ]
             }});
