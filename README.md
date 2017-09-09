@@ -5,6 +5,7 @@ A Discord music bot made with Discord.js.<br>
 ## Commands
 &#8226; `!yt`<br>
 &#8226; `!invite`<br>
+&#8226; `!eval`<br>
 ## Main Contributors
 &#8226; iComputer7<br>
 &#8226; SalmonSeasoning<br>
@@ -32,7 +33,8 @@ If you want to host SalmonSounds yourself, go right ahead! Just clone this repos
     "custom-game":"",
     "status":"online",
     "prefix":"!",
-    "guild-invite-link":"https://discord.gg/245jNW8"
+    "guild-invite-link":"https://discord.gg/245jNW8",
+    "botAdmins":[]
   }
 }
 ```
@@ -42,3 +44,4 @@ If you want to host SalmonSounds yourself, go right ahead! Just clone this repos
 `status` is the status you want to be displayed. It can be `online`, `idle`, `dnd` or `invisible`.<br>
 `prefix` is the prefix you want your bot to use. (default: `!`)<br>
 `guild-invite-link` is the invite link to your Discord server. Have fun!<br>
+`botAdmins` is an array which should contain user ID's. It gives access to the `eval` command and more.
