@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const ytdl = require("ytdl-core");
 //gotta import that fancy config file
 const config = require("./config.json")['configuration'];
 
@@ -38,6 +39,29 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
 
         message.member.voiceChannel.join().then((connection) => {
           connection.playFile(parsed).on("end", ()=> {connection.disconnect();});
+        });
+      }
+    }
+  }
+
+  if (message.content.startsWith(config["prefix"] + "yt")) {
+    if (message.member.voiceChannel) {
+      message.channel.send("You are in the voice channel " + message.member.voiceChannel.name);
+      if (message.member.voiceChannel.joinable) {
+        var parser = message.content.split(" "), parsed = [];
+        for (var i = 0; i <= parser.length; i++) {
+          if (i >= 1) {
+          	parsed.push(parser[i]);		//Horrible parser because javascript sucks
+          }
+        }
+        parsed = parsed.join(" ");
+        parsed = parsed.substring(0, parsed.length - 1);
+
+        //Parser debug
+        message.channel.send(parsed);
+
+        message.member.voiceChannel.join().then((connection) => {
+          connection.playStream(ytdl(parsed, {filter: "audioonly"})).on("end", ()=> {connection.disconnect();});
         });
       }
     }
