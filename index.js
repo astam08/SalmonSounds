@@ -21,29 +21,6 @@ client.on("reconnecting", ()=>{
 });
 
 client.on("message", (message) => { //eww these indents suck but i'm too lazy to change the setting
-  if (message.content.startsWith(config["prefix"] + "voice")) {
-    if (message.member.voiceChannel) {
-      message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
-      if (message.member.voiceChannel.joinable) {
-        var parser = message.content.split(" "), parsed = [];
-        for (var i = 0; i <= parser.length; i++) {
-          if (i >= 1) {
-          	parsed.push(parser[i]);		//Horrible parser because javascript sucks
-          }
-        }
-        parsed = parsed.join(" ");
-        parsed = parsed.substring(0, parsed.length - 1);
-
-        //Parser debug
-        message.channel.send(parsed);
-
-        message.member.voiceChannel.join().then((connection) => {
-          connection.playFile(parsed).on("end", ()=> {connection.disconnect();});
-        });
-      }
-    }
-  }
-
   if (message.content.startsWith(config["prefix"] + "yt")) {
     if (message.member.voiceChannel) {
       message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
