@@ -29,6 +29,11 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
   if (message.content == config["prefix"] + "voice") {
     if (message.member.voiceChannel) {
       message.channel.send("You are in the voice channel " + message.member.voiceChannel.name);
+      if (message.member.voiceChannel.joinable) {
+        message.member.voiceChannel.join().then((connection) => {
+          connection.playFile("tada.wav");
+        });
+      }
     }
   }
   if(message.content == config['prefix'] + 'invite'){
