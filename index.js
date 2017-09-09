@@ -38,7 +38,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
         //message.channel.send(parsed);
         var stream = ytdl(parsed, {filter: "audioonly"});
 
-        ytdl.on("info", (i, f) => {
+        ytdl.getInfo(parsed).then((i, f) => {
           message.member.voiceChannel.join().then((connection) => {
             connection.playStream(stream).on("end", ()=> {connection.disconnect();});
           });
