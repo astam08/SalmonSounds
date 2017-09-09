@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const ytdl = require("ytdl-core");
 //gotta import that fancy config file
 const config = require("./config.json")['configuration'];
+const botAdmins = require('./config.json')['configuration']['botAdmins'];
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
@@ -83,7 +84,11 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
   		message.reply("I am not in a voice channel!");
     }
 	}
-
+  if(message.content == config['prefix'] + 'eval'){
+    if(!botAdmins.includes(message.author.id)) return;
+    console.log(`EVAL RAN BY <${message.author}>: ${message.content.substring((config['prefix'] + 'eval').length)}`);
+    eval(message.content.substring((config['prefix'] + 'eval').length));
+  }
 });
 
 

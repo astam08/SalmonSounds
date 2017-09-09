@@ -5,6 +5,10 @@
     "custom-game":"",
     "status":"online",
     "prefix":"!",
-    "guild-invite-link":"https://discord.gg/245jNW8"
+    "guild-invite-link":"https://discord.gg/245jNW8",
+    "botAdmins":[
+      "171717502911381505",
+      "311296013178503188"
+    ]
   }
 }
