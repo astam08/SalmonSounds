@@ -21,6 +21,9 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
       message.channel.send("You are in the voice channel " + message.member.voiceChannel.name);
     }
   }
+  if(message.content == config['prefix'] + 'invite'){
+    message.channel.send('Here, join our server! ' + config['guild-invite-link']);
+  }
 });
 
 client.login(config['token']);
