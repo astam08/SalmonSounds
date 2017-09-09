@@ -72,7 +72,9 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
   }
   if (message.content.toLowerCase() == config["prefix"] + "disconnect") {
   	if (message.guild.voiceConnection) {
-  		message.guild.voiceConnection.dispatcher.end();
+      if (message.guild.voiceConnection.dispatcher) {
+  		    message.guild.voiceConnection.dispatcher.end();
+      }
   	} else {
   		message.reply("I am not in a voice channel!");
     }
