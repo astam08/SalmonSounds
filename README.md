@@ -5,7 +5,9 @@ A Discord music bot made with Discord.js.<br>
 ## Commands
 &#8226; `!yt`<br>
 &#8226; `!invite`<br>
-&#8226; `!eval`<br>
+&#8226; ~~`!eval`~~<br>
+&#8226; `!join`<br>
+&#8226; `!stop/!disconnect/!leave`<br>
 ## Main Contributors
 &#8226; iComputer7<br>
 &#8226; SalmonSeasoning<br>
