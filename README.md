@@ -17,12 +17,13 @@ A Discord music bot made with Discord.js.<br>
 If you want to host SalmonSounds yourself, go right ahead! Just clone this repository or download a stable release in [Releases](https://github.com/SalmonSeasoning/SalmonSounds/releases)!<br>
 ## How to set up!
 1) Extract repository<br>
-2) Install dependencies (also delete `Node_Modules` and `npm-debug.log` to ensure this will work for your system)<br>
+2) Install dependencies<br>
 3) Edit config.json<br>
 4) Run `node .` (optional: install [Forever](https://github.com/foreverjs/forever) and use that instead)<br>
 ## Dependencies
-&#8226; Discord.js `npm install discord.js --save`<br>
-&#8226; Node-Opus `npm install discord.js node-opus --save`<br>
+&#8226; Discord.js (required) `npm install discord.js --save`<br>
+&#8226; Node-Opus (required) `npm install discord.js node-opus --save`<br>
+&#8226; ytdl-core (required) `npm install ytdl-core --save`<br>
 &#8226; Sodium `npm install sodium --save` and `npm install libsodium-wrappers --save`<br>
 &#8226; UWS `npm install uws --save`<br>
 &#8226; erlpack `npm install hammerandchisel/erlpack --save`<br>
