@@ -23,7 +23,7 @@ client.on("reconnecting", ()=>{
 client.on("message", (message) => { //eww these indents suck but i'm too lazy to change the setting
   if (message.content.startsWith(config["prefix"] + "voice")) {
     if (message.member.voiceChannel) {
-      message.channel.send("You are in the voice channel " + message.member.voiceChannel.name);
+      message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
       if (message.member.voiceChannel.joinable) {
         var parser = message.content.split(" "), parsed = [];
         for (var i = 0; i <= parser.length; i++) {
