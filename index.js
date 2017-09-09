@@ -57,7 +57,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
                 inline: true
               }
             ]
-          });
+          }});
           message.member.voiceChannel.join().then((connection) => {
             connection.playStream(stream).on("end", ()=> {connection.disconnect();});
           });
