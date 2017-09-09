@@ -2,11 +2,6 @@
 A Discord music bot made with Discord.js.
 ## Invite official bot!
 [Click here to invite](https://discordapp.com/oauth2/authorize?client_id=355909071221817344&scope=bot&permissions=104190016)
-## How to set up!
-1) Clone this repository<br>
-2) Install dependencies<br>
-3) Edit config.json
-4) Run `node .` (optional: install Forever and use that instead)<br>
 ## Commands
 &#8226; `!help`<br>
 ## Main Contributors
@@ -14,6 +9,13 @@ A Discord music bot made with Discord.js.
 &#8226; SalmonSeasoning<br>
 ## Website
 [GitHub Pages](https://salmonseasoning.github.io/SalmonSounds)
+## Download
+If you want to host SalmonSounds yourself, go right ahead! Just clone this repository or download a stable release in [Releases](https://github.com/SalmonSeasoning/SalmonSounds/releases)!
+## How to set up!
+1) Extract repository<br>
+2) Install dependencies (also delete `Node_Modules` and `npm-debug.log` to ensure this will work for your system)<br>
+3) Edit config.json
+4) Run `node .` (optional: install [Forever](https://github.com/foreverjs/forever) and use that instead)<br>
 ## Dependencies
 &#8226; Discord.js `npm install discord.js --save`<br>
 &#8226; Node-Opus `npm install discord.js node-opus --save`<br>
