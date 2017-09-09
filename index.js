@@ -23,7 +23,6 @@ client.on("reconnecting", ()=>{
 client.on("message", (message) => { //eww these indents suck but i'm too lazy to change the setting
   if (message.content.startsWith(config["prefix"] + "yt")) {
     if (message.member.voiceChannel) {
-      message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
       if (message.member.voiceChannel.joinable) {
         var parser = message.content.split(" "), parsed = [];
         for (var i = 0; i <= parser.length; i++) {
@@ -36,32 +35,36 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
 
         //Parser debug
         //message.channel.send(parsed);
-        var stream = ytdl(parsed, {filter: "audioonly"});
-
-        ytdl.getInfo(parsed).then((i, f) => {
-          message.channel.send({embed: {
-            hexColor: "#ff5733", //TODO: Fix the color
-            author: {
-              name: client.user.username,
-              icon_url: client.user.displayAvatarURL
-            },
-            fields: [
-              {
-                name: "Title",
-                value: i["title"],
-                inline: true
+        try {
+          var stream = ytdl(parsed, {filter: "audioonly"});
+          ytdl.getInfo(parsed).then((i, f) => {
+            message.channel.send({embed: {
+              hexColor: "#ff5733", //TODO: Fix the color
+              author: {
+                name: client.user.username,
+                icon_url: client.user.displayAvatarURL
               },
-              {
-                name: "Author",
-                value: i["author"]["name"],
-                inline: true
-              }
-            ]
-          }});
-          message.member.voiceChannel.join().then((connection) => {
-            connection.playStream(stream).on("end", ()=> {connection.disconnect();});
+              fields: [
+                {
+                  name: "Title",
+                  value: i["title"],
+                  inline: true
+                },
+                {
+                  name: "Author",
+                  value: i["author"]["name"],
+                  inline: true
+                }
+              ]
+            }});
+            message.member.voiceChannel.join().then((connection) => {
+              message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
+              connection.playStream(stream).on("end", ()=> {connection.disconnect();});
+            });
           });
-        });
+        } catch (e) {
+          message.channel.send(e.message);
+        }
       }
     }
   }
