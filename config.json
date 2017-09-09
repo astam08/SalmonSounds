@@ -4,6 +4,7 @@
     "blacklisted-sites":[""],
     "custom-game":"",
     "status":"online",
-    "prefix":"!"
+    "prefix":"!",
+    "guild-invite-link":"https://discord.gg/245jNW8"
   }
 }
