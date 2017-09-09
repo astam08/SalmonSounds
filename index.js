@@ -15,7 +15,7 @@ client.on("ready", () => {
 client.on("message", (message) => { //eww these indents suck but i'm too lazy to change the setting
   if (message.content == config["prefix"] + "voice") {
     if (message.member.voiceChannel) {
-      message.channel.send("You are in the voice channel" + message.member.voiceChannel.name);
+      message.channel.send("You are in the voice channel " + message.member.voiceChannel.name);
     }
   }
 });
