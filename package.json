@@ -17,10 +17,16 @@
     "Discord.js",
     "SalmonSounds"
   ],
-  "authors": ["SalmonSeasoning", "iComputer7"],
+  "authors": [
+    "SalmonSeasoning",
+    "iComputer7"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SalmonSeasoning/SalmonSounds/issues"
   },
-  "homepage": "https://github.com/SalmonSeasoning/SalmonSounds#readme"
+  "homepage": "https://github.com/SalmonSeasoning/SalmonSounds#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  }
 }
