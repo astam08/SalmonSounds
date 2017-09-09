@@ -31,7 +31,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
       message.channel.send("You are in the voice channel " + message.member.voiceChannel.name);
       if (message.member.voiceChannel.joinable) {
         message.member.voiceChannel.join().then((connection) => {
-          connection.playFile("tada.wav").on("end", ()=> {connection.disconnect();});
+          connection.playFile("repost.wav").on("end", ()=> {connection.disconnect();});
         });
       }
     }
