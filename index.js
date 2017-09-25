@@ -37,64 +37,68 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
   }
 
   if (message.content.toLowerCase().startsWith(config["prefix"] + "play")) {
-    if (message.member.voiceChannel) {
-      if (message.member.voiceChannel.joinable) {
-        var parser = message.content.split(" "), parsed = [];
-        for (let i = 0; i <= parser.length; i++) {
-          if (i >= 1) {
-          	parsed.push(parser[i]);		//Horrible parser because javascript sucks
+    if (message.guild.voiceConnection) {
+      message.channel.send("You are already playing something in `" + message.guild.voiceConnection.channel.name + "`");
+    } else {
+      if (message.member.voiceChannel) {
+        if (message.member.voiceChannel.joinable) {
+          var parser = message.content.split(" "), parsed = [];
+          for (let i = 0; i <= parser.length; i++) {
+            if (i >= 1) {
+            	parsed.push(parser[i]);		//Horrible parser because javascript sucks
+            }
           }
-        }
-        parsed = parsed.join(" ");
-        parsed = parsed.substring(0, parsed.length - 1);
+          parsed = parsed.join(" ");
+          parsed = parsed.substring(0, parsed.length - 1);
 
-        //Parser debug
-        //message.channel.send(parsed);
-        try {
-          var stream = ytdl(parsed, {filter: "audioonly"});
-          ytdl.getInfo(parsed).then((i, f) => {
-            message.channel.send({embed: {
-              color: 16753920,
-              thumbnail: {
-                url: i["iurl"]
-              },
-              author: {
-                name: client.user.username,
-                icon_url: client.user.displayAvatarURL,
-              },
-              title: i["title"],
-              url: i["video_url"],
-              fields: [
-                {
-                  name: "Author",
-                  value: i["author"]["name"],
-                  inline: true
+          //Parser debug
+          //message.channel.send(parsed);
+          try {
+            var stream = ytdl(parsed, {filter: "audioonly"});
+            ytdl.getInfo(parsed).then((i, f) => {
+              message.channel.send({embed: {
+                color: 16753920,
+                thumbnail: {
+                  url: i["iurl"]
                 },
-                {
-                  name: "Length (seconds)",
-                  value: i["length_seconds"],
-                  inline: true
+                author: {
+                  name: client.user.username,
+                  icon_url: client.user.displayAvatarURL,
                 },
-                {
-                  name: "Views",
-                  value: i["view_count"],
-                  inline: true
-                }
-              ]
-            }});
-            message.member.voiceChannel.join().then((connection) => {
-              message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
-              connection.playStream(stream).on("end", ()=> {connection.disconnect();});
+                title: i["title"],
+                url: i["video_url"],
+                fields: [
+                  {
+                    name: "Author",
+                    value: i["author"]["name"],
+                    inline: true
+                  },
+                  {
+                    name: "Length (seconds)",
+                    value: i["length_seconds"],
+                    inline: true
+                  },
+                  {
+                    name: "Views",
+                    value: i["view_count"],
+                    inline: true
+                  }
+                ]
+              }});
+              message.member.voiceChannel.join().then((connection) => {
+                message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
+                connection.playStream(stream).on("end", ()=> {connection.disconnect();});
+              });
             });
-          });
-        } catch (e) {
-          message.channel.send(e.message);
+          } catch (e) {
+            message.channel.send(e.message);
+          }
+        } else {
+          message.reply("It seems that you are in a voice channel, but I can't join!");
         }
       } else {
-        message.reply("It seems that you are in a voice channel, but I can't join!");
+        message.reply("You are not in a voice channel!");
       }
-    } else {
-      message.reply("You are not in a voice channel!");
     }
   }
 
