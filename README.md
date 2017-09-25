@@ -3,7 +3,7 @@ A Discord music bot made with Discord.js.<br>
 ## Invite official bot!
 [Click here to invite](https://discordapp.com/oauth2/authorize?client_id=355909071221817344&scope=bot&permissions=104190016)<br>
 ## Commands
-&#8226; `!yt`<br>
+&#8226; `!play`<br>
 &#8226; `!invite`<br>
 &#8226; ~~`!eval`~~<br>
 &#8226; `!join`<br>

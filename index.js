@@ -35,7 +35,8 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
       message.reply("You are not in a voice channel!");
     }
   }
-  if (message.content.toLowerCase().startsWith(config["prefix"] + "yt")) {
+
+  if (message.content.toLowerCase().startsWith(config["prefix"] + "play")) {
     if (message.member.voiceChannel) {
       if (message.member.voiceChannel.joinable) {
         var parser = message.content.split(" "), parsed = [];
