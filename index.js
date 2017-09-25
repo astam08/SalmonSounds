@@ -55,6 +55,9 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
           ytdl.getInfo(parsed).then((i, f) => {
             message.channel.send({embed: {
               color: 16753920,
+              thumbnail: {
+                url: i["iurl"]
+              },
               author: {
                 name: client.user.username,
                 icon_url: client.user.displayAvatarURL
