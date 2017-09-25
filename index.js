@@ -60,14 +60,11 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
               },
               author: {
                 name: client.user.username,
-                icon_url: client.user.displayAvatarURL
+                icon_url: client.user.displayAvatarURL,
               },
+              title: i["title"],
+              url: i["video_url"],
               fields: [
-                {
-                  name: "Title",
-                  value: i["title"],
-                  inline: true
-                },
                 {
                   name: "Author",
                   value: i["author"]["name"],
