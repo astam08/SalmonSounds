@@ -173,17 +173,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
   	} else {
   		message.reply("I am not in a voice channel!");
     }
-	}/*
-Broken
-
-  if(message.content.toLowerCase() == config['prefix'] + 'eval' && config["enable-eval"] == true){
-    if(config['botAdmins'].includes(message.author.id)){
-      console.log(`EVAL RAN BY <${message.author}>: ${message.content.substring((config['prefix'] + 'eval').length)}`);
-      eval(message.content.substring((config['prefix'] + 'eval').length));
-    }else{
-      console.log(`EVAL ATTEMPT FROM <${message.author}> FAILED`);
-    }
-  }*/
+	}
   if(message.content.toLowerCase() == config['prefix'] + 'view-config'){
     message.channel.send({embed: {
       color: 16753920,
@@ -258,6 +248,11 @@ Broken
         }]
 
     }});
+  }
+  if(message.content.toLowerCase() == config['prefix'] + 'eval' && config["enable-eval"] == true && config["botAdmins"].includes(message.author.id)){
+    let evalstring = String(message.content.substring(((config['prefix'] + 'eval').length)));
+    console.log(`EVAL RAN BY <${message.author.username}>: ${evalstring}`);
+    eval(evalstring);
   }
 });
 
