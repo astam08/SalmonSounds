@@ -39,48 +39,45 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
   }
 
   if (message.content.toLowerCase().startsWith(config["prefix"] + "play")) {
-    if (message.guild.voiceConnection) {
-      if(guildQueue[message.guild.id]){
-        var parser = message.content.split(" "), parsed = [];
-        for (let i = 0; i <= parser.length; i++) {
-          if (i >= 1) {
-            parsed.push(parser[i]);		//Horrible parser because javascript sucks
-          }
+    if(guildQueue[message.guild.id]){
+      var parser = message.content.split(" "), parsed = [];
+      for (let i = 0; i <= parser.length; i++) {
+        if (i >= 1) {
+          parsed.push(parser[i]);		//Horrible parser because javascript sucks
         }
-        parsed = parsed.join(" ");
-        parsed = parsed.substring(0, parsed.length - 1);
-        guildQueue.push(parsed);
-        message.channel.send({embed: {
-          color: 16753920,
-          thumbnail: {
-            url: i["iurl"]
-          },
-          author: {
-            name: client.user.username,
-            icon_url: client.user.displayAvatarURL,
-          },
-          title: "ADDED TO QUEUE: " + i["title"],
-          url: i["video_url"],
-          fields: [
-            {
-              name: "Author",
-              value: i["author"]["name"],
-              inline: true
-            },
-            {
-              name: "Length (seconds)",
-              value: i["length_seconds"],
-              inline: true
-            },
-            {
-              name: "Views",
-              value: i["view_count"],
-              inline: true
-            }
-          ]
-        }});
       }
-      message.channel.send("You are already playing something in `" + message.guild.voiceConnection.channel.name + "`");
+      parsed = parsed.join(" ");
+      parsed = parsed.substring(0, parsed.length - 1);
+      guildQueue.push(parsed);
+      message.channel.send({embed: {
+        color: 16753920,
+        thumbnail: {
+          url: i["iurl"]
+        },
+        author: {
+          name: client.user.username,
+          icon_url: client.user.displayAvatarURL,
+        },
+        title: "ADDED TO QUEUE: " + i["title"],
+        url: i["video_url"],
+        fields: [
+          {
+            name: "Author",
+            value: i["author"]["name"],
+            inline: true
+          },
+          {
+            name: "Length (seconds)",
+            value: i["length_seconds"],
+            inline: true
+          },
+          {
+            name: "Views",
+            value: i["view_count"],
+            inline: true
+          }
+        ]
+      }});
     } else {
       if (message.member.voiceChannel) {
         if (message.member.voiceChannel.joinable) {
