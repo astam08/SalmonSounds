@@ -1,6 +1,7 @@
 {
   "configuration":{
     "token":"",
+    "youtube-api-key":"",
     "blacklisted-sites":[""],
     "custom-game":"",
     "status":"online",
