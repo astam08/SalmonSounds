@@ -193,7 +193,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
 
     }});
   }
-  if(message.content.toLowerCase() == config['prefix'] + 'eval' && config["enable-eval"] == true && config["botAdmins"].includes(message.author.id)){
+  if(message.content.toLowerCase().startsWith(config['prefix'] + 'eval') && config["enable-eval"] == true && config["botAdmins"].includes(message.author.id)){
     let evalstring = String(message.content.substring(((config['prefix'] + 'eval').length)));
     console.log(`EVAL RAN BY <${message.author.username}>: ${evalstring}`);
     eval(evalstring);
