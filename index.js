@@ -7,35 +7,7 @@ const youtube = new ytnode();
 //gotta import that fancy config file
 const config = require("./config.json")['configuration'];
 
-const guildQueue = {};
 youtube.setKey(config['youtube-api-key']);
-
-function findVideo(input){
-
-if(input.includes('youtube.com' || 'youtu.be')){
-  var video_id = window.location.search.split('v=')[1];
-  var ampersandPosition = video_id.indexOf('&');
-  if(ampersandPosition != -1) {
-    video_id = video_id.substring(0, ampersandPosition);
-  }
-  youtube.getById(video_id, (error, results)=>{
-    if(error){
-      console.error(error);
-      return null;
-    }
-    return results;
-  });
-  }else{
-    youtube.search(input, 20, (error, results)=>{
-      if(error){
-        console.error(error);
-        return null;
-      }
-      return results;
-    });
-  }
-}
-
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
