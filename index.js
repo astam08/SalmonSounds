@@ -70,62 +70,12 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
   }
 
   if (message.content.toLowerCase().startsWith(config["prefix"] + "play")) {
-<<<<<<< HEAD
-    if(guildQueue[message.guild.id]){
-      var parser = message.content.split(" "), parsed = [];
-      for (let i = 0; i <= parser.length; i++) {
-        if (i >= 1) {
-          parsed.push(parser[i]);		//Horrible parser because javascript sucks
-        }
-      }
-      parsed = parsed.join(" ");
-      parsed = parsed.substring(0, parsed.length - 1);
-      guildQueue.push(parsed);
-      message.channel.send({embed: {
-        color: 16753920,
-        thumbnail: {
-          url: i["iurl"]
-        },
-        author: {
-          name: client.user.username,
-          icon_url: client.user.displayAvatarURL,
-        },
-        title: "ADDED TO QUEUE: " + i["title"],
-        url: i["video_url"],
-        fields: [
-          {
-            name: "Author",
-            value: i["author"]["name"],
-            inline: true
-          },
-          {
-            name: "Length (seconds)",
-            value: i["length_seconds"],
-            inline: true
-          },
-          {
-            name: "Views",
-            value: i["view_count"],
-            inline: true
-          }
-        ]
-      }});
-    } else {
-      if (message.member.voiceChannel) {
-        if (message.member.voiceChannel.joinable) {
-          var parser = message.content.split(" "), parsed = [];
-          for (let i = 0; i <= parser.length; i++) {
-            if (i >= 1) {
-            	parsed.push(parser[i]);		//Horrible parser because javascript sucks
-            }
-=======
     if (message.member.voiceChannel) {
       if (message.member.voiceChannel.joinable) {
         var parser = message.content.split(" "), parsed = [];
         for (let i = 0; i <= parser.length; i++) {
           if (i >= 1) {
           	parsed.push(parser[i]);		//Horrible parser because javascript sucks
->>>>>>> parent of 8e145f2... You are already playing something
           }
         }
         parsed = parsed.join(" ");
@@ -158,50 +108,6 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
                   value: i["length_seconds"],
                   inline: true
                 },
-<<<<<<< HEAD
-                title: i["title"],
-                url: i["video_url"],
-                fields: [
-                  {
-                    name: "Author",
-                    value: i["author"]["name"],
-                    inline: true
-                  },
-                  {
-                    name: "Length (seconds)",
-                    value: i["length_seconds"],
-                    inline: true
-                  },
-                  {
-                    name: "Views",
-                    value: i["view_count"],
-                    inline: true
-                  }
-                ]
-              }});
-              message.member.voiceChannel.join().then((connection) => {
-                message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
-                function tryMusic(stream_obj){
-                connection.playStream(stream_obj).on("end", ()=> {
-                  function isEmpty(obj) {
-                    for(var prop in obj) {
-                        if(obj.hasOwnProperty(prop))
-                            return false;
-                    }
-
-                    return true;
-                  }
-                  if(isEmpty(guildQueue)){
-                    connection.disconnect();
-                  }else{
-                    tryMusic(guildQueue[message.guild.id][0]);
-                    guildQueue[message.guild.id].shift();
-                  }
-                });
-              }
-              tryMusic(stream);
-              });
-=======
                 {
                   name: "Views",
                   value: i["view_count"],
@@ -212,7 +118,6 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
             message.member.voiceChannel.join().then((connection) => {
               message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
               connection.playStream(stream).on("end", ()=> {connection.disconnect();});
->>>>>>> parent of 8e145f2... You are already playing something
             });
           });
         } catch (e) {
