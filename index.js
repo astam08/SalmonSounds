@@ -102,10 +102,6 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
       message.reply("You are not in a voice channel!");
     }
   }
-  if(message.content.toLowerCase() == config['prefix'] + 'clear'){
-      guildQueue[message.guild.id] = [];
-      message.channel.send('Guild Queue Cleared!!');
-  }
   if(message.content.toLowerCase() == config['prefix'] + 'invite'){
     message.reply('join our server! ' + config['guild-invite-link']);
   }
