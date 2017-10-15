@@ -1,12 +1,11 @@
 ![alt text](https://img.shields.io/badge/Release-Alpha-red.svg)
-![alt text](https://img.shields.io/badge/Contributors-2-green.svg)
 ![alt text](https://img.shields.io/badge/API-Discord.js%20v11.2.1-blue.svg)
 ![alt text](https://img.shields.io/badge/Stability-Mostly%20Stable-green.svg)
 # SalmonSounds
 A Discord music bot made with Discord.js.<br>
 ## Invite official bot!
 [Click here to invite](https://discordapp.com/oauth2/authorize?client_id=355909071221817344&scope=bot&permissions=104190016)<br>
-## Commands (Not relevant to latest release)
+## Commands
 &#8226; `!play`<br>
 &#8226; `!invite`<br>
 &#8226; `!eval`<br>
