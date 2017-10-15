@@ -49,7 +49,7 @@ Note: You might have to delete things such as `package.json` (for example) and s
 }
 ```
 `token` is your Bot token. You create your bot at [Discord Developers](https://discordapp.com/developers)<br>
-`blacklisted-sites` is the domains that you want to keep users from playing music or audio from.<br>
+`blacklisted-sites` is the domains that you want to keep users from playing music or audio from. (Not implemented, yet!)<br>
 `custom-game` is the game you want your bot to be playing. (default: "!help")<br>
 `status` is the status you want to be displayed. It can be `online`, `idle`, `dnd` or `invisible`.<br>
 `prefix` is the prefix you want your bot to use. (default: `!`)<br>
