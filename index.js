@@ -1,16 +1,57 @@
+// defining global constants
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const ytdl = require("ytdl-core");
 const ytnode = require('youtube-node');
 const youtube = new ytnode();
 
-//gotta import that fancy config file
+// importing config.json
 const config = require("./config.json")['configuration'];
 
+// setting YouTube API key
 youtube.setKey(config['youtube-api-key']);
 
+// functions to make code neater
+function parse(message){
+  var parser = message.content.split(" "), parsed = [];
+  for (let i = 0; i <= parser.length; i++) {
+    if (i >= 1) {
+      parsed.push(parser[i]);
+    }
+  }
+  parsed = parsed.join(" ");
+  parsed = parsed.substring(0, parsed.length - 1);
+  return parsed;
+}
+
+function VoiceChannelCheck(member){
+    this.VoiceChannel = (member.voiceChannel) ? true : false;
+    if(this.VoiceChannel){
+      // voice channel exists
+      this.VoiceChannelJoinable = (member.voiceChannel.joinable) ? true : false;
+      this.VoiceChannelName = member.voiceChannel.name;
+      this.VoiceChannelSpeakable = (member.voiceChannel.speakable) ? true : false;
+    }else{
+      // voice channel does not exist
+      this.VoiceChannelJoinable = null;
+      this.VoiceChannelName = null;
+      this.VoiceChannelSpeakable = null;
+    }
+  return this;
+  /*
+      This could be useful for later.
+      Usage: var vc_stats = new VoiceChannelCheck( member_object );
+
+      Keys in Object: VoiceChannel (Boolean), VoiceChannelJoinable (Boolean or null), VoiceChannelName (String or null), VoiceChannelSpeakable (Boolean or null)
+
+  */
+}
+
+
 client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}`);
+  // bot is online, logging status
+  console.log(`Logged in as ${client.user.username}#${client.user.discriminator}.`);
+  // detecting if a custom game is set, elsewise the default "game" will be set.
   if (config['custom-game'] == "") {
     client.user.setGame(config['prefix'] + "help");
   } else {
@@ -18,46 +59,44 @@ client.on("ready", () => {
   }
   console.log('SalmonSounds bot is successfully up and running!');
 });
+
 client.on("disconnect", () => {
+  // logging status (disconnected from Discord)
   console.log('Disconnected!');
 });
+
 client.on("reconnecting", ()=>{
+  // logging status (attempting to reconnect to Discord)
   console.log('Attempting to reconnect.');
 });
 
-client.on("message", (message) => { //eww these indents suck but i'm too lazy to change the setting
-  if(message.author.id == client.user.id || message.author.bot) return;
-  if(message.content.toLowerCase().startsWith(config['prefix'] + 'join')){
+client.on("message", (message) => {
+  if(message.author.id == client.user.id || message.author.bot) return; // if user is a bot (or more specifically, this bot), return.
+  if(message.content.toLowerCase().startsWith(config['prefix'] + 'join')){ // join voice channel
     if(message.member.voiceChannel){
       if(message.member.voiceChannel.joinable){
         message.member.voiceChannel.join().then((vc)=>{
-          message.reply('Joining `' + message.member.voiceChannel.name + '`');
+          message.reply('Joining `' + message.member.voiceChannel.name + '`'); // notifying everyone that bot is attempting to join
         });
       } else {
-        message.reply("It seems that you are in a voice channel, but I can't join!");
+        message.reply("It seems that you are in a voice channel, but I can't join!"); // notifying everyone that bot was unable to join
       }
     } else {
-      message.reply("You are not in a voice channel!");
+      message.reply("You are not in a voice channel!"); // notifying everyone that there is no voice channel to join
     }
   }
 
   if (message.content.toLowerCase().startsWith(config["prefix"] + "play")) {
     if (message.member.voiceChannel) {
       if (message.member.voiceChannel.joinable) {
-        var parser = message.content.split(" "), parsed = [];
-        for (let i = 0; i <= parser.length; i++) {
-          if (i >= 1) {
-          	parsed.push(parser[i]);		//Horrible parser because javascript sucks
-          }
-        }
-        parsed = parsed.join(" ");
-        parsed = parsed.substring(0, parsed.length - 1);
+        // parsing message
+        var parsed = parse(message);
 
-        //Parser debug
-        //message.channel.send(parsed);
         try {
+          // getting YouTube info
           var stream = ytdl(parsed, {filter: "audioonly"});
           ytdl.getInfo(parsed).then((i, f) => {
+            // .. sending video info to discord channel
             message.channel.send({embed: {
               color: 16753920,
               thumbnail: {
@@ -88,24 +127,30 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
               ]
             }});
             message.member.voiceChannel.join().then((connection) => {
+              // joining voice channel and attempting to play stream
               message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
               connection.playStream(stream).on("end", ()=> {connection.disconnect();});
             });
           });
         } catch (e) {
+          // something with getting youtube video and playing it failed.
           message.channel.send(e.message);
         }
       } else {
+        // in voice channel but lacking perms
         message.reply("It seems that you are in a voice channel, but I can't join!");
       }
     } else {
+      // no voice channel
       message.reply("You are not in a voice channel!");
     }
   }
   if(message.content.toLowerCase() == config['prefix'] + 'invite'){
+    // get invite
     message.reply('join our server! ' + config['guild-invite-link']);
   }
   if (message.content.toLowerCase() == config["prefix"] + "stop" || message.content.toLowerCase() == config["prefix"] + "disconnect" || message.content.toLowerCase() == config["prefix"] + "leave") {
+    // stop stream and disconnect from voice channel
   	if (message.guild.voiceConnection) {
       message.guild.voiceConnection.disconnect();
       message.channel.send("Disconnected.");
@@ -115,6 +160,7 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
     }
 	}
   if(message.content.toLowerCase() == config['prefix'] + 'view-config'){
+    // send message to Discord channel showing bot's config
     message.channel.send({embed: {
       color: 16753920,
       author: {
@@ -190,11 +236,12 @@ client.on("message", (message) => { //eww these indents suck but i'm too lazy to
     }});
   }
   if(message.content.toLowerCase().startsWith(config['prefix'] + 'eval') && config["enable-eval"] == true && config["botAdmins"].includes(message.author.id)){
+    // eval command (unstable)
     let evalstring = String(message.content.substring(((config['prefix'] + 'eval').length)));
     console.log(`EVAL RAN BY <${message.author.username}>: ${evalstring}`);
     eval(evalstring);
   }
 });
 
-
+// connect to Discord
 client.login(config['token']);
