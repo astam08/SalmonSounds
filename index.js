@@ -1,52 +1,8 @@
 // defining global constants
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const ytdl = require("ytdl-core");
-const ytnode = require('youtube-node');
-const youtube = new ytnode();
-
-// importing config.json
-const config = require("./config.json")['configuration'];
-
-// setting YouTube API key
-youtube.setKey(config['youtube-api-key']);
-
-// functions to make code neater
-function parse(message){
-  var parser = message.content.split(" "), parsed = [];
-  for (let i = 0; i <= parser.length; i++) {
-    if (i >= 1) {
-      parsed.push(parser[i]);
-    }
-  }
-  parsed = parsed.join(" ");
-  parsed = parsed.substring(0, parsed.length - 1);
-  return parsed;
-}
-
-function VoiceChannelCheck(member){
-    this.VoiceChannel = (member.voiceChannel) ? true : false;
-    if(this.VoiceChannel){
-      // voice channel exists
-      this.VoiceChannelJoinable = (member.voiceChannel.joinable) ? true : false;
-      this.VoiceChannelName = member.voiceChannel.name;
-      this.VoiceChannelSpeakable = (member.voiceChannel.speakable) ? true : false;
-    }else{
-      // voice channel does not exist
-      this.VoiceChannelJoinable = null;
-      this.VoiceChannelName = null;
-      this.VoiceChannelSpeakable = null;
-    }
-  return this;
-  /*
-      This could be useful for later.
-      Usage: var vc_stats = new VoiceChannelCheck( member_object );
-
-      Keys in Object: VoiceChannel (Boolean), VoiceChannelJoinable (Boolean or null), VoiceChannelName (String or null), VoiceChannelSpeakable (Boolean or null)
-
-  */
-}
-
+const actions = require('./actions');
+const config = require("./config.json")['configuration']; // config file
 
 client.on("ready", () => {
   // bot is online, logging status
@@ -70,6 +26,9 @@ client.on("reconnecting", ()=>{
   console.log('Attempting to reconnect.');
 });
 
+
+
+
 client.on("message", (message) => {
   if(message.author.id == client.user.id || message.author.bot) return; // if user is a bot (or more specifically, this bot), return.
   if(message.content.toLowerCase().startsWith(config['prefix'] + 'join')){ // join voice channel
@@ -90,12 +49,12 @@ client.on("message", (message) => {
     if (message.member.voiceChannel) {
       if (message.member.voiceChannel.joinable) {
         // parsing message
-        var parsed = parse(message);
+        let url = actions.parser(message.content).parsedMessage;
 
         try {
           // getting YouTube info
-          var stream = ytdl(parsed, {filter: "audioonly"});
-          ytdl.getInfo(parsed).then((i, f) => {
+          let stream = actions.yt_search.createStream(url, {filter: 'audioonly'});
+          stream.get_stream().getInfo().then((i, f) => {
             // .. sending video info to discord channel
             message.channel.send({embed: {
               color: 16753920,
@@ -129,7 +88,7 @@ client.on("message", (message) => {
             message.member.voiceChannel.join().then((connection) => {
               // joining voice channel and attempting to play stream
               message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
-              connection.playStream(stream).on("end", ()=> {connection.disconnect();});
+              connection.playStream(stream.get_stream()).on("end", ()=> {connection.disconnect();});
             });
           });
         } catch (e) {
@@ -236,12 +195,14 @@ client.on("message", (message) => {
     }});
   }
   if(message.content.toLowerCase().startsWith(config['prefix'] + 'eval') && config["enable-eval"] == true && config["botAdmins"].includes(message.author.id)){
-    // eval command (unstable)
     let evalstring = String(message.content.substring(((config['prefix'] + 'eval').length)));
     console.log(`EVAL RAN BY <${message.author.username}>: ${evalstring}`);
     eval(evalstring);
   }
 });
+
+
+
 
 // connect to Discord
 client.login(config['token']);
