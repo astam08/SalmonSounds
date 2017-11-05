@@ -11,7 +11,7 @@ client.on("ready", () => {
 	// game status
 	let statusArray = [
 		config['prefix'] + "help",
-		client.user.guilds.array().length + " guilds!",
+		client.guilds.array().length + " guilds!",
 		"https://github.com/SalmonSeasoning/SalmonSounds",
 	];
 	if(config['custom-game'] != '') statusArray.push(config['custom-game']);
