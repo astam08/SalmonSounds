@@ -7,13 +7,26 @@ const config = require("./config.json")['configuration']; // config file
 client.on("ready", () => {
   // bot is online, logging status
   console.log(`Logged in as ${client.user.username}#${client.user.discriminator}.`);
-  // detecting if a custom game is set, elsewise the default "game" will be set.
-  if (config['custom-game'] == "") {
-    client.user.setGame(config['prefix'] + "help");
-  } else {
-    client.user.setGame(config['custom-game']);
-  }
   console.log('SalmonSounds bot is successfully up and running!');
+	// game status
+	let statusArray = [
+		config['prefix'] + "help",
+		client.user.guilds.array().length + " guilds!",
+		"https://github.com/SalmonSeasoning/SalmonSounds",
+	];
+	if(config['custom-game'] != '') statusArray.push(config['custom-game']);
+	let choice = Math.floor(Math.random() * statusArray.length);
+	client.user.setGame(statusArray[choice]).catch(console.error);
+	setInterval(()=>{
+		if(choice < statusArray.length){
+			choice++;
+			client.user.setGame(statusArray[choice]).catch(console.error);
+		}else{
+			choice = 0;
+			client.user.setGame(statusArray[choice]).catch(console.error);
+		}
+	}, 60000);
+
 });
 
 client.on("disconnect", () => {
@@ -35,18 +48,24 @@ client.on("message", (message) => {
     if(message.member.voiceChannel){
       if(message.member.voiceChannel.joinable){
         message.member.voiceChannel.join().then((vc)=>{
-          message.reply('Joining `' + message.member.voiceChannel.name + '`'); // notifying everyone that bot is attempting to join
+          message.reply('Joining `' + message.member.voiceChannel.name + '`').catch(console.error); // notifying everyone that bot is attempting to join
         });
       } else {
-        message.reply("It seems that you are in a voice channel, but I can't join!"); // notifying everyone that bot was unable to join
+        message.reply("It seems that you are in a voice channel, but I can't join!").catch(console.error); // notifying everyone that bot was unable to join
       }
     } else {
-      message.reply("You are not in a voice channel!"); // notifying everyone that there is no voice channel to join
+      message.reply("You are not in a voice channel!").catch(console.error); // notifying everyone that there is no voice channel to join
     }
   }
 
   if (message.content.toLowerCase().startsWith(config["prefix"] + "play")) {
     if (message.member.voiceChannel) {
+			if(message.guild.members.get(client.user.id).voiceChannel){
+				if(message.guild.members.get(client.user.id).voiceChannel.id == message.member.voiceChannel.id){
+					message.reply('I am already in the same voice channel that you are in. Please do !stop, !disconnect, or !leave in order to play a different song as queues have not been added in for this version of SalmonSounds.');
+					return;
+				}
+			}
       if (message.member.voiceChannel.joinable) {
         // parsing message
         let url = new actions.parser(message.content).getParsedMessage();
@@ -54,7 +73,7 @@ client.on("message", (message) => {
         try {
           // getting YouTube info
           let stream = new actions.yt_search.createStream(url, {filter: 'audioonly'});
-          stream.get_stream().getInfo().then((i, f) => {
+          stream.getInfo().then((i, f) => {
             // .. sending video info to discord channel
             message.channel.send({embed: {
               color: 16753920,
@@ -84,38 +103,34 @@ client.on("message", (message) => {
                   inline: true
                 }
               ]
-            }});
+            }}).catch(console.error);
             message.member.voiceChannel.join().then((connection) => {
               // joining voice channel and attempting to play stream
-              message.channel.send("Joining `" + message.member.voiceChannel.name + "`");
+              message.channel.send("Joining `" + message.member.voiceChannel.name + "`").catch(console.error);
               connection.playStream(stream.get_stream()).on("end", ()=> {connection.disconnect();});
             });
           });
         } catch (e) {
           // something with getting youtube video and playing it failed.
-          message.channel.send(e.message);
+          message.channel.send(e.message).catch(console.error);
         }
       } else {
         // in voice channel but lacking perms
-        message.reply("It seems that you are in a voice channel, but I can't join!");
+        message.reply("It seems that you are in a voice channel, but I can't join!").catch(console.error);
       }
     } else {
       // no voice channel
-      message.reply("You are not in a voice channel!");
+      message.reply("You are not in a voice channel!").catch(console.error);
     }
-  }
-  if(message.content.toLowerCase() == config['prefix'] + 'invite'){
-    // get invite
-    message.reply('join our server! ' + config['guild-invite-link']);
   }
   if (message.content.toLowerCase() == config["prefix"] + "stop" || message.content.toLowerCase() == config["prefix"] + "disconnect" || message.content.toLowerCase() == config["prefix"] + "leave") {
     // stop stream and disconnect from voice channel
   	if (message.guild.voiceConnection) {
       message.guild.voiceConnection.disconnect();
-      message.channel.send("Disconnected.");
+      message.channel.send("Disconnected.").catch(console.error);
       return;
   	} else {
-  		message.reply("I am not in a voice channel!");
+  		message.reply("I am not in a voice channel!").catch(console.error);
     }
 	}
   if(message.content.toLowerCase() == config['prefix'] + 'view-config'){
@@ -130,17 +145,6 @@ client.on("message", (message) => {
         {
           name: "Token",
           value: "**SECRET**",
-          inline: true
-        },
-        {
-          name: "Blacklisted Sites",
-          value: (function(){
-            if(config['blacklisted-sites'] == ''){
-              return 'None set';
-            }else{
-              return config['blacklisted-sites'].join(', ');
-            }
-          })(),
           inline: true
         },
         {
@@ -165,17 +169,6 @@ client.on("message", (message) => {
           inline: true
         },
         {
-          name: 'Discord Server Invite Link',
-          value: (function(){
-            if (config['guild-invite-link'] == "") {
-              return "Not set";
-            } else {
-              return config['guild-invite-link'];
-            }
-          })(),
-          inline: true
-        },
-        {
           name: 'Bot Administrators (User IDs)',
           value: (function(){
             if(config['botAdmins'] == ''){
@@ -192,8 +185,9 @@ client.on("message", (message) => {
           inline: true
         }]
 
-    }});
+    }}).catch(console.error);
   }
+	// eval command
   if(message.content.toLowerCase().startsWith(config['prefix'] + 'eval') && config["enable-eval"] == true && config["botAdmins"].includes(message.author.id)){
     let evalstring = String(message.content.substring(((config['prefix'] + 'eval').length)));
     console.log(`EVAL RAN BY <${message.author.username}>: ${evalstring}`);

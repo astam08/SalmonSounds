@@ -1,7 +1,8 @@
 class Parser{
-  Constructor(text){
+  constructor(text){
     this.original = text;
-    let parser = text.split(" "), parsed = [];
+    let parser = text.split(" ");
+		let parsed = [];
     for (let i = 0; i <= parser.length; i++) {
       if (i >= 1) {
         parsed.push(parser[i]);
@@ -9,10 +10,9 @@ class Parser{
     }
     parsed = parsed.join(" ");
     parsed = parsed.substring(0, parsed.length - 1);
-
-    this.parsedMessage = parsed;
+		this.parsedMessage = parsed;
   }
-  get getParsedMessage(){
+  getParsedMessage(){
     return this.parsedMessage;
   }
 }

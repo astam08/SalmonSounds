@@ -28,6 +28,7 @@
   "homepage": "https://github.com/SalmonSeasoning/SalmonSounds#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
+    "discord.js-arbitrary-ffmpeg": "^1.0.0",
     "node-opus": "^0.2.7",
     "youtube-search": "^1.0.10",
     "ytdl-core": "^0.17.1"
