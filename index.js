@@ -49,11 +49,11 @@ client.on("message", (message) => {
     if (message.member.voiceChannel) {
       if (message.member.voiceChannel.joinable) {
         // parsing message
-        let url = actions.parser(message.content).parsedMessage;
+        let url = new actions.parser(message.content).getParsedMessage();
 
         try {
           // getting YouTube info
-          let stream = actions.yt_search.createStream(url, {filter: 'audioonly'});
+          let stream = new actions.yt_search.createStream(url, {filter: 'audioonly'});
           stream.get_stream().getInfo().then((i, f) => {
             // .. sending video info to discord channel
             message.channel.send({embed: {

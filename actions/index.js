@@ -1,4 +1,4 @@
 module.exports = {
-  'yt_search': require('./actions/youtube-api/stream.js'),
-  'parser': require('./actions/discord/parser.js')
+  'yt_search': require('./youtube-api/stream.js'),
+  'parser': require('./discord/parser.js')
 };

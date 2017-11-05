@@ -18,8 +18,8 @@
     "SalmonSounds"
   ],
   "authors": {
-    "SalmonSeasoning":"qualtersty@gmail.com",
-    "iComputer7":"seancale.sc@gmail.com"
+    "SalmonSeasoning": "qualtersty@gmail.com",
+    "iComputer7": "seancale.sc@gmail.com"
   },
   "license": "MIT",
   "bugs": {
@@ -28,8 +28,8 @@
   "homepage": "https://github.com/SalmonSeasoning/SalmonSounds#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "node-opus": "^0.2.6",
-    "ytdl-core": "^0.17.1",
-    "youtube-search":"^1.0.10"
+    "node-opus": "^0.2.7",
+    "youtube-search": "^1.0.10",
+    "ytdl-core": "^0.17.1"
   }
 }

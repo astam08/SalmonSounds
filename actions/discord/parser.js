@@ -1,8 +1,6 @@
 class Parser{
   Constructor(text){
     this.original = text;
-
-
     let parser = text.split(" "), parsed = [];
     for (let i = 0; i <= parser.length; i++) {
       if (i >= 1) {
@@ -14,7 +12,7 @@ class Parser{
 
     this.parsedMessage = parsed;
   }
-  get parsedMessage(){
+  get getParsedMessage(){
     return this.parsedMessage;
   }
 }
