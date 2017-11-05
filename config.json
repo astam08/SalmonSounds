@@ -1,11 +1,10 @@
 {
   "configuration":{
     "token":"",
-    "blacklisted-sites":[""],
+    "YTAPIKey":"",
     "custom-game":"",
     "status":"online",
-    "prefix":"!",
-    "guild-invite-link":"https://discord.gg/245jNW8",
+    "prefix":"<",
     "botAdmins":[],
     "enable-eval":true
   }
