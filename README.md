@@ -1,6 +1,6 @@
 ![alt text](https://img.shields.io/badge/Release-Alpha-red.svg)
 ![alt text](https://img.shields.io/badge/API-Discord.js%20v11.2.1-blue.svg)
-![alt text](https://img.shields.io/badge/Stability-Questionable-yellow.svg)
+![alt text](https://img.shields.io/badge/Stability-Probably-yellow.svg)
 # SalmonSounds
 A Discord music bot made with Discord.js.<br>
 ## Invite official bot!
