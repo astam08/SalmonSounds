@@ -6,16 +6,6 @@ const config = require('../../config.json')['configuration'];
 
 youtube.setKey(config['YTAPIKey']);
 
-
-youtube.related('jhkjdhafjkhslkahfkajhflkasjhdfklhskajfhkaslhfklashfkljashkfljashklfjdhskjfdhaklsjfhklashfkdhkjsahfkhjasdklfhasklfhjklashfklasfhasklhfklahfklhkl', 2, function(error, result) {
-  if (error) {
-    console.log(error);
-  }
-  else {
-    console.log(JSON.stringify(result, null, 2));
-  }
-});
-
 class createStream{
   constructor(url, filter){
     this.URL = url; // setting URL Prototype to URL of video link
