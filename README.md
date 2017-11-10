@@ -37,7 +37,7 @@ Note: You might have to delete things such as `package.json` (for example) and s
 {
   "configuration":{
     "token":"",
-		"YTAPIKey":"",
+    "YTAPIKey":"",
     "custom-game":"",
     "status":"online",
     "prefix":"!",
