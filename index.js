@@ -26,7 +26,7 @@ client.on("ready", () => {
 			choice = 0;
 			client.user.setGame(statusArray[choice]).catch(console.error);
 		}
-	}, 60000);
+	}, 30000);
 
 });
 
@@ -144,11 +144,6 @@ client.on("message", (message) => {
         icon_url: client.user.displayAvatarURL
       },
       fields: [
-        {
-          name: "Token",
-          value: "**SECRET**",
-          inline: true
-        },
         {
           name: "Custom Game Text",
           value: (function(){
