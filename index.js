@@ -8,26 +8,8 @@ client.on("ready", () => {
   // bot is online, logging status
   console.log(`Logged in as ${client.user.username}#${client.user.discriminator}.`);
   console.log('SalmonSounds bot is successfully up and running!');
-	client.user.setStatus(config['status'] || 'online');
-	// game status
-	let statusArray = [
-		config['prefix'] + "help",
-		client.guilds.array().length + " guilds!",
-		"https://github.com/SalmonSeasoning/SalmonSounds",
-	];
-	if(config['custom-game'] != '') statusArray.push(config['custom-game']);
-	let choice = Math.floor(Math.random() * statusArray.length);
-	client.user.setGame(statusArray[choice]).catch(console.error);
-	setInterval(()=>{
-		if(choice < statusArray.length){
-			choice++;
-			client.user.setGame(statusArray[choice]).catch(console.error);
-		}else{
-			choice = 0;
-			client.user.setGame(statusArray[choice]).catch(console.error);
-		}
-	}, 30000);
-
+  client.user.setStatus(config['status'] || 'online');
+  client.user.setGame(`${prefix}help`);	
 });
 
 client.on("disconnect", () => {
