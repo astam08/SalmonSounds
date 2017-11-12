@@ -69,10 +69,10 @@ client.on("message", (message) => {
       if (message.member.voiceChannel.joinable) {
         // parsing message
         let url = new actions.parser(message.content).getParsedMessage();
-
-        try {
+				try {
           // getting YouTube info
-          let stream = new actions.yt_search.createStream(url, {filter: 'audioonly'});
+          (new actions.yt_search.search(url).search()).then((videoURL)=>{
+					let stream = new actions.yt_search.createStream(videoURL, {filter: 'audioonly'});
           stream.getInfo().then((i, f) => {
             // .. sending video info to discord channel
             message.channel.send({embed: {
@@ -114,6 +114,9 @@ client.on("message", (message) => {
           // something with getting youtube video and playing it failed.
           message.channel.send(e.message).catch(console.error);
         }
+			}, (error)=>{
+				message.reply(error).catch(console.error);
+			});
       } else {
         // in voice channel but lacking perms
         message.reply("It seems that you are in a voice channel, but I can't join!").catch(console.error);
