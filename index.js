@@ -3,45 +3,57 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const actions = require('./actions');
 const config = require("./config.json")['configuration']; // config file
-
 client.on("ready", () => {
   // bot is online, logging status
   console.log(`Logged in as ${client.user.username}#${client.user.discriminator}.`);
   console.log('SalmonSounds bot is successfully up and running!');
   client.user.setStatus(config['status'] || 'online');
-  client.user.setGame(config["prefix"]+"help");	
+  client.user.setGame(config["prefix"]+"help");
 });
-
 client.on("disconnect", () => {
   // logging status (disconnected from Discord)
   console.log('Disconnected!');
 });
-
 client.on("reconnecting", ()=>{
   // logging status (attempting to reconnect to Discord)
   console.log('Attempting to reconnect.');
 });
-
-
-
-
 client.on("message", (message) => {
   if(message.author.id == client.user.id || message.author.bot) return; // if user is a bot (or more specifically, this bot), return.
-  if(message.content.toLowerCase().startsWith(config['prefix'] + 'join')){ // join voice channel
-    if(message.member.voiceChannel){
-      if(message.member.voiceChannel.joinable){
-        message.member.voiceChannel.join().then((vc)=>{
-          message.reply('Joining `' + message.member.voiceChannel.name + '`').catch(console.error); // notifying everyone that bot is attempting to join
-        });
-      } else {
-        message.reply("It seems that you are in a voice channel, but I can't join!").catch(console.error); // notifying everyone that bot was unable to join
-      }
-    } else {
-      message.reply("You are not in a voice channel!").catch(console.error); // notifying everyone that there is no voice channel to join
-    }
-  }
-
-  if (message.content.toLowerCase().startsWith(config["prefix"] + "play")) {
+	if(message.content.toLowerCase().startsWith(config['prefix'] + 'help')){
+		message.author.send({embed: {
+			color: 16753920,
+			author: {
+				name: client.user.username,
+				icon_url: client.user.displayAvatarURL,
+			},
+			title: 'help',
+			fields: [
+				{
+					name: `${config['prefix']}help`,
+					value: 'Sends the author a list of commands.',
+					inline: true
+				},
+				{
+					name: `${config['prefix']}play, ${config['prefix']}yt, ${config['prefix']}start`,
+					value: 'Joins bot to a voice channel. Discards current stream. Starts a different stream from YouTube.',
+					inline: true
+				},
+				{
+					name: `${config['prefix']}leave, ${config['prefix']}disconnect, ${config['prefix']}stop`,
+					value: 'Forces the bot to stop whatever it is playing and leave the voice channel.',
+					inline: true
+				},
+				{
+					name: `${config['prefix']}eval`,
+					value: 'A raw JavaScript-input function for Bot Administrators / Developers. (Should only be accessible to permitted accounts!)',
+					inline: true
+				},
+			]
+		}}).catch(console.error);
+		return;
+	}
+  if (message.content.toLowerCase().startsWith(config["prefix"] + "play")||message.content.toLowerCase().startsWith(config["prefix"] + "yt")||message.content.toLowerCase().startsWith(config["prefix"] + "start")) {
     if (message.member.voiceChannel) {
 			if(message.guild.members.get(client.user.id).voiceChannel){
 				if(message.guild.members.get(client.user.id).voiceChannel.id == message.member.voiceChannel.id){
@@ -95,7 +107,7 @@ client.on("message", (message) => {
           });
 				});
         } catch (e) {
-          // something with getting youtube video and playing it failed.
+          // something with getting youtube video and/or playing it has failed.
           message.channel.send(e.message).catch(console.error);
         }
       } else {
@@ -106,6 +118,7 @@ client.on("message", (message) => {
       // no voice channel
       message.reply("You are not in a voice channel!").catch(console.error);
     }
+		return;
   }
   if (message.content.toLowerCase() == config["prefix"] + "stop" || message.content.toLowerCase() == config["prefix"] + "disconnect" || message.content.toLowerCase() == config["prefix"] + "leave") {
     // stop stream and disconnect from voice channel
@@ -116,6 +129,7 @@ client.on("message", (message) => {
   	} else {
   		message.reply("I am not in a voice channel!").catch(console.error);
     }
+		return;
 	}
   if(message.content.toLowerCase() == config['prefix'] + 'view-config'){
     // send message to Discord channel showing bot's config
@@ -126,17 +140,6 @@ client.on("message", (message) => {
         icon_url: client.user.displayAvatarURL
       },
       fields: [
-        {
-          name: "Custom Game Text",
-          value: (function(){
-            if (config['custom-game'] == "") {
-              return "Not set";
-            } else {
-              return config['custom-game'];
-            }
-          })(),
-          inline: true
-        },
         {
           name:'Status',
           value: client.user.presence.status,
@@ -149,13 +152,7 @@ client.on("message", (message) => {
         },
         {
           name: 'Bot Administrators (User IDs)',
-          value: (function(){
-            if(config['botAdmins'] == ''){
-              return 'None set';
-            }else{
-              return config['botAdmins'].join(', ');
-            }
-          })(),
+          value: config['botAdmins'].join(', ') || 'None set!',
           inline: true
         },
         {
@@ -163,19 +160,16 @@ client.on("message", (message) => {
           value: config['enable-eval'],
           inline: true
         }]
-
     }}).catch(console.error);
+		return;
   }
 	// eval command
   if(message.content.toLowerCase().startsWith(config['prefix'] + 'eval') && config["enable-eval"] == true && config["botAdmins"].includes(message.author.id)){
-    let evalstring = String(message.content.substring(((config['prefix'] + 'eval').length)));
+    let evalstring = String(message.content.substring((config['prefix'] + 'eval').length));
     console.log(`EVAL RAN BY <${message.author.username}>: ${evalstring}`);
     eval(evalstring);
+		return;
   }
 });
-
-
-
-
 // connect to Discord
 client.login(config['token']);
