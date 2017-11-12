@@ -1,6 +1,6 @@
 ![alt text](https://img.shields.io/badge/Release-Alpha-red.svg)
 ![alt text](https://img.shields.io/badge/API-Discord.js%20v11.2.1-blue.svg)
-![alt text](https://img.shields.io/badge/Stability-Probably-yellow.svg)
+![alt text](https://img.shields.io/badge/Stability-Being%20Tested-yellow.svg)
 # SalmonSounds
 A Discord music bot made with Discord.js.<br>
 ## Invite official bot!
@@ -22,18 +22,18 @@ If you want to host SalmonSounds yourself, go right ahead! Just clone this repos
 2) Install dependencies<br>
 3) Edit config.json<br>
 4) Run `node .` (optional: install [Forever](https://github.com/foreverjs/forever) and use that instead)<br>
-Note: You might have to delete things such as `package.json` (for example) and start the Node project from scratch using `npm init`.<br>
+Note: You might have to delete things such as `package.json` (for example) and start the Node project from scratch using `npm init`<br>
 ## Dependencies
-&#8226; Discord.js (required) `npm install discord.js --save`<br>
-&#8226; Discord.js-arbitrary-ffmpeg (required) `npm install discord.js --save`<br>
-&#8226; Node-Opus (required) `npm install discord.js node-opus --save`<br>
-&#8226; ytdl-core (required) `npm install ytdl-core --save`<br>
-&#8226; [FFMPEG](https://www.ffmpeg.org) (required -> add 'bin' folder location to PATH)<br>
+&#8226; Discord.js <span style="color:red">\*required</span> `npm install discord.js --save`<br>
+&#8226; Discord.js-arbitrary-ffmpeg <span style="color:red">\*required</span> `npm install discord.js --save`<br>
+&#8226; Node-Opus <span style="color:red">\*required</span> `npm install discord.js node-opus --save`<br>
+&#8226; ytdl-core <span style="color:red">\*required</span> `npm install ytdl-core --save`<br>
+&#8226; [FFMPEG](https://www.ffmpeg.org) <span style="color:red">\*required</span> (add 'bin' folder location to PATH)<br>
 &#8226; Sodium `npm install sodium --save` and `npm install libsodium-wrappers --save`<br>
 &#8226; UWS `npm install uws --save`<br>
 &#8226; erlpack `npm install hammerandchisel/erlpack --save`<br>
 ## Config.json
-```
+```json
 {
   "configuration":{
     "token":"",
@@ -46,11 +46,10 @@ Note: You might have to delete things such as `package.json` (for example) and s
   }
 }
 ```
-`token` is your Bot token. You create your bot at [Discord Developers](https://discordapp.com/developers)<br>
-`YTAPIKey` is your YouTube API key. [Get it here!](https://console.developers.google.com/apis)<br>
-`custom-game` is the game you want your bot to be playing. (default: "!help")<br>
-`status` is the status you want to be displayed. It can be `online`, `idle`, `dnd` or `invisible`.<br>
-`prefix` is the prefix you want your bot to use. (default: `!`)<br>
-`guild-invite-link` is the invite link to your Discord server. Have fun!<br>
-`botAdmins` is an array which should contain user ID's. It gives access to the `eval` command and more.
-`enable-eval` should be either `true` or `false` it gives bot admins access to the eval command.
+`token` is your Bot token. You create your bot at [Discord Developers](https://discordapp.com/developers) <span style="color:red">\*required</span><br>
+`YTAPIKey` is your YouTube API key. [Get it here!](https://console.developers.google.com/apis) <span style="color:red">\*required</span><br>
+`custom-game` is the game you want your bot to be playing<br>
+`status` is the status you want to be displayed. It can be `online`, `idle`, `dnd` or `invisible`<br>
+`prefix` is the prefix you want your bot to use (default: `!`) <span style="color:red">\*required</span><br>
+`botAdmins` is an array which should contain user ID's. It gives access to the `!eval` command<br>
+`enable-eval` should be either `true` or `false` it gives bot admins access to the eval command

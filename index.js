@@ -8,6 +8,7 @@ client.on("ready", () => {
   // bot is online, logging status
   console.log(`Logged in as ${client.user.username}#${client.user.discriminator}.`);
   console.log('SalmonSounds bot is successfully up and running!');
+	client.user.setStatus(config['status'] || 'online');
 	// game status
 	let statusArray = [
 		config['prefix'] + "help",
