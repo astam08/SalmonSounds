@@ -111,13 +111,11 @@ client.on("message", (message) => {
               connection.playStream(stream.get_stream()).on("end", ()=> {connection.disconnect();});
             });
           });
+				});
         } catch (e) {
           // something with getting youtube video and playing it failed.
           message.channel.send(e.message).catch(console.error);
         }
-			}, (error)=>{
-				message.reply(error).catch(console.error);
-			});
       } else {
         // in voice channel but lacking perms
         message.reply("It seems that you are in a voice channel, but I can't join!").catch(console.error);
