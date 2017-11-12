@@ -38,7 +38,6 @@ Note: You might have to delete things such as `package.json` (for example) and s
   "configuration":{
     "token":"",
     "YTAPIKey":"",
-    "custom-game":"",
     "status":"online",
     "prefix":"!",
     "botAdmins":[],
@@ -48,7 +47,6 @@ Note: You might have to delete things such as `package.json` (for example) and s
 ```
 `token` is your Bot token. You create your bot at [Discord Developers](https://discordapp.com/developers) <span style="color:red">\*required</span><br>
 `YTAPIKey` is your YouTube API key. [Get it here!](https://console.developers.google.com/apis) <span style="color:red">\*required</span><br>
-`custom-game` is the game you want your bot to be playing<br>
 `status` is the status you want to be displayed. It can be `online`, `idle`, `dnd` or `invisible`<br>
 `prefix` is the prefix you want your bot to use (default: `!`) <span style="color:red">\*required</span><br>
 `botAdmins` is an array which should contain user ID's. It gives access to the `!eval` command<br>
