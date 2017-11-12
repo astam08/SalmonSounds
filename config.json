@@ -3,7 +3,7 @@
     "token":"",
     "YTAPIKey":"",
     "status":"online",
-    "prefix":"<",
+    "prefix":"!",
     "botAdmins":[],
     "enable-eval":true
   }
