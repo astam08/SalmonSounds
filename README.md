@@ -25,7 +25,7 @@ If you want to host SalmonSounds yourself, go right ahead! Just clone this repos
 Note: You might have to delete things such as `package.json` (for example) and start the Node project from scratch using `npm init`<br>
 ## Dependencies
 &#8226; Discord.js <span style="color:red">\*required</span> `npm install discord.js --save`<br>
-&#8226; Discord.js-arbitrary-ffmpeg <span style="color:red">\*required</span> `npm install discord.js --save`<br>
+&#8226; Discord.js-arbitrary-ffmpeg <span style="color:red">\*required</span> `npm install discord.js-arbitrary-ffmpeg --save`<br>
 &#8226; Node-Opus <span style="color:red">\*required</span> `npm install discord.js node-opus --save`<br>
 &#8226; ytdl-core <span style="color:red">\*required</span> `npm install ytdl-core --save`<br>
 &#8226; [FFMPEG](https://www.ffmpeg.org) <span style="color:red">\*required</span> (add 'bin' folder location to PATH)<br>
