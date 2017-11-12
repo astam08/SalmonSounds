@@ -9,7 +9,7 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.username}#${client.user.discriminator}.`);
   console.log('SalmonSounds bot is successfully up and running!');
   client.user.setStatus(config['status'] || 'online');
-  client.user.setGame(`${prefix}help`);	
+  client.user.setGame(config["prefix"]+"help");	
 });
 
 client.on("disconnect", () => {
