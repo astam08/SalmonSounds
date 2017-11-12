@@ -63,7 +63,7 @@ client.on("message", (message) => {
     if (message.member.voiceChannel) {
 			if(message.guild.members.get(client.user.id).voiceChannel){
 				if(message.guild.members.get(client.user.id).voiceChannel.id == message.member.voiceChannel.id){
-					message.reply('I am already in the same voice channel that you are in. Please do !stop, !disconnect, or !leave in order to play a different song as queues have not been added in for this version of SalmonSounds.');
+					message.reply(`I am already in the same voice channel that you are in. Please do ${config['prefix']}stop, ${config['prefix']}disconnect, or ${config['prefix']}leave in order to play a different song as queues have not been added in for this version of SalmonSounds.`).catch(console.error);
 					return;
 				}
 			}
