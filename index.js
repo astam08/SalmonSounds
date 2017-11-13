@@ -3,12 +3,19 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const actions = require('./actions');
 const config = require("./config.json")['configuration']; // config file
+if(!config['prefix']) config['prefix'] = "!"; // default in case not set!
+if(!config['token'] || !config['YTAPIKey']){
+  throw(new Error('Discord Token or YouTube API key not set!'));
+}
 client.on("ready", () => {
   // bot is online, logging status
   console.log(`Logged in as ${client.user.username}#${client.user.discriminator}.`);
   console.log('SalmonSounds bot is successfully up and running!');
   client.user.setStatus(config['status'] || 'online');
   client.user.setGame(config["prefix"]+"help");
+  if(!client.user.bot){
+    throw(new Error('ACCOUNT TYPE is USER not BOT'));
+  }
 });
 client.on("disconnect", () => {
   // logging status (disconnected from Discord)
