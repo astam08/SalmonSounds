@@ -1,6 +1,6 @@
-![alt text](https://img.shields.io/badge/Release-Alpha-red.svg)
-![alt text](https://img.shields.io/badge/API-Discord.js%20v11.2.1-blue.svg)
-![alt text](https://img.shields.io/badge/Stability-Stable-green.svg)
+![Release:Alpha](https://img.shields.io/badge/Release-Alpha-red.svg)
+![API:Discord.js v11.2.1](https://img.shields.io/badge/API-Discord.js%20v11.2.1-blue.svg)
+![Stability:Stable](https://img.shields.io/badge/Stability-Stable-green.svg)
 # SalmonSounds
 A Discord music bot made with Discord.js.<br>
 ## Invite official bot!
@@ -25,8 +25,10 @@ Note: You might have to delete things such as `package.json` (for example) and s
 ## Dependencies
 &#8226; Discord.js -- **required** -- `npm install discord.js --save`<br>
 &#8226; Discord.js-arbitrary-ffmpeg -- **required** -- `npm install discord.js-arbitrary-ffmpeg --save`<br>
-&#8226; Node-Opus -- **required** -- `npm install discord.js node-opus --save`<br>
+&#8226; Node-Opus -- **required** -- `npm install node-opus --save`<br>
 &#8226; ytdl-core -- **required** -- `npm install ytdl-core --save`<br>
+&#8226; ytdl-core -- **required** -- `npm install youtube-node --save`<br>
+-> You can install all of the above in one line: `npm install discord.js discord.js-arbitrary-ffmpeg node-opus ytdl-core youtube-node`<br>
 &#8226; [FFMPEG](https://www.ffmpeg.org) -- **required** -- (add 'bin' folder location to PATH)<br>
 &#8226; Sodium `npm install sodium --save` and `npm install libsodium-wrappers --save`<br>
 &#8226; UWS `npm install uws --save`<br>
