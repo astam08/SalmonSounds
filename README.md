@@ -6,12 +6,15 @@ A Discord music bot made with Discord.js.<br>
 ## Invite official bot!
 [Click here to invite](https://discordapp.com/oauth2/authorize?client_id=355909071221817344&scope=bot&permissions=104190016)<br>
 ## Commands
+&#8226; `!help`<br>
+&#8226; `!ping`<br>
 &#8226; `!play/!yt/!start`<br>
 &#8226; `!stop/!disconnect/!leave`<br>
 &#8226; `!eval`<br>
 ## Main Contributors
 &#8226; [iComputer7](https://github.com/iComputer7)<br>
 &#8226; [SalmonSeasoning](https://github.com/SalmonSeasoning)<br>
+Note: It's quite difficult developing and testing a "host yourself" Discord music bot without many Contributors. It's even more difficult trying to make it worthwhile considering the lack of commands and a lot of required dependencies.
 ## Website
 [GitHub Pages](https://salmonseasoning.github.io/SalmonSounds)<br>
 ## Download
@@ -28,7 +31,7 @@ Note: You might have to delete things such as `package.json` (for example) and s
 &#8226; Node-Opus -- **required** -- `npm install node-opus --save`<br>
 &#8226; ytdl-core -- **required** -- `npm install ytdl-core --save`<br>
 &#8226; ytdl-core -- **required** -- `npm install youtube-node --save`<br>
--> You can install all of the above in one line: `npm install discord.js discord.js-arbitrary-ffmpeg node-opus ytdl-core youtube-node`<br>
+-> You can install all of the above in one line: `npm install discord.js discord.js-arbitrary-ffmpeg node-opus ytdl-core youtube-node --save`<br>
 &#8226; [FFMPEG](https://www.ffmpeg.org) -- **required** -- (add 'bin' folder location to PATH)<br>
 &#8226; Sodium `npm install sodium --save` and `npm install libsodium-wrappers --save`<br>
 &#8226; UWS `npm install uws --save`<br>

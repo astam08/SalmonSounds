@@ -28,6 +28,9 @@ client.on("reconnecting", ()=>{
 });
 client.on("message", (message) => {
   if(message.author.id == client.user.id || message.author.bot) return; // if user is a bot (or more specifically, this bot), return.
+	if(message.content.toLowerCase().startsWith(config['prefix'] + 'ping')){
+		return message.reply(`${~~client.ping}ms`);
+	}
 	if(message.content.toLowerCase().startsWith(config['prefix'] + 'help')){
 		message.author.send({embed: {
 			color: 16753920,
@@ -57,6 +60,11 @@ client.on("message", (message) => {
 					value: 'A raw JavaScript-input function for Bot Administrators / Developers. (Should only be accessible to permitted accounts!)',
 					inline: true
 				},
+				{
+					name: `${config['prefix']}ping`,
+					value: "Simply replies to you with the bot's ping to Discord.",
+					inline: true
+				}
 			]
 		}}).catch(console.error);
 		return;
