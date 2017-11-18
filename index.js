@@ -96,7 +96,7 @@ client.on("message", (message) => {
                   inline: true
                 },
                 {
-                  name: "Length (seconds)",
+                  name: "Duration",
                   value: TimeParser.format((Number(i["length_seconds"]) * 1000)), // get length of video in seconds, multiply by 1000 to convert to milliseconds, use parser to parse into Time format. This parser took forever to make.
                   inline: true
                 },
