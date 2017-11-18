@@ -4,7 +4,6 @@ const client = new Discord.Client();
 const actions = require('./actions');
 const config = require("./config.json")['configuration']; // config file
 const TimeParser = actions.Time;
-const CommaInserter = actions.NumSplitter;
 if(!config['prefix']) config['prefix'] = "!"; // default in case not set!
 if(!config['token'] || !config['YTAPIKey']){
   throw(new Error('Discord Token or YouTube API key not set!'));
@@ -103,7 +102,7 @@ client.on("message", (message) => {
                 },
                 {
                   name: "Views",
-                  value: CommaInserter(i["view_count"]),
+                  value: i["view_count"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"),
                   inline: true
                 }
               ]
