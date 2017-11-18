@@ -103,7 +103,7 @@ client.on("message", (message) => {
                 },
                 {
                   name: "Views",
-                  value: (new CommaInserter(i["view_count"])),
+                  value: CommaInserter(i["view_count"]),
                   inline: true
                 }
               ]
