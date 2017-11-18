@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const actions = require('./actions');
 const config = require("./config.json")['configuration']; // config file
 const TimeParser = actions.Time;
+const CommaInserter = actions.NumSplitter;
 if(!config['prefix']) config['prefix'] = "!"; // default in case not set!
 if(!config['token'] || !config['YTAPIKey']){
   throw(new Error('Discord Token or YouTube API key not set!'));
@@ -15,7 +16,7 @@ client.on("ready", () => {
   client.user.setStatus(config['status'] || 'online');
   client.user.setGame(config["prefix"]+"help");
   if(!client.user.bot){
-    throw(new Error('ACCOUNT TYPE is USER not BOT'));
+    throw(new Error('ACCOUNT TYPE is USER not BOT!'));
   }
 });
 client.on("disconnect", () => {
@@ -102,7 +103,7 @@ client.on("message", (message) => {
                 },
                 {
                   name: "Views",
-                  value: i["view_count"],
+                  value: (new CommaInserter(i["view_count"])),
                   inline: true
                 }
               ]
@@ -131,9 +132,17 @@ client.on("message", (message) => {
   if (message.content.toLowerCase() == config["prefix"] + "stop" || message.content.toLowerCase() == config["prefix"] + "disconnect" || message.content.toLowerCase() == config["prefix"] + "leave") {
     // stop stream and disconnect from voice channel
   	if (message.guild.voiceConnection) {
+			if(message.guild.members.get(message.author.id).voiceChannelID === message.guild.members.get(client.user.id).voiceChannelID){
       message.guild.voiceConnection.disconnect();
       message.channel.send("Disconnected.").catch(console.error);
-      return;
+      return;}else{
+				if(message.guild.members.get(message.author.id).hasPermission('ADMINISTRATOR')){
+					message.guild.voiceConnection.disconnect();
+		      message.channel.send("Disconnected.").catch(console.error);
+				}else{
+					message.reply('I am not permitted to obey your command. You are not in the same voice channel as me and are not an Administrator.').catch(console.error);
+				}
+			}
   	} else {
   		message.reply("I am not in a voice channel!").catch(console.error);
     }

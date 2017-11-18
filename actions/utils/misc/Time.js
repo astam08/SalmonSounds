@@ -29,7 +29,7 @@ class Time{
 		_toString += (hours && hours >= 10) ? `${hours}:` : '';
 		_toString += (hours && hours < 10) ? `0${hours}:` : '';
 		_toString += (minutes && minutes >= 10) ? `${minutes}:` : `0${minutes}:`;
-		_toString += (seconds && seconds >= 10) ? `${seconds}:` : `0${seconds}`;
+		_toString += (seconds && seconds >= 10) ? `${seconds}` : `0${seconds}`;
 		return _toString;
 	}
 	toString(){
