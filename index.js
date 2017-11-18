@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const actions = require('./actions');
 const config = require("./config.json")['configuration']; // config file
+const TimeParser = actions.Time;
 if(!config['prefix']) config['prefix'] = "!"; // default in case not set!
 if(!config['token'] || !config['YTAPIKey']){
   throw(new Error('Discord Token or YouTube API key not set!'));
@@ -96,7 +97,7 @@ client.on("message", (message) => {
                 },
                 {
                   name: "Length (seconds)",
-                  value: i["length_seconds"],
+                  value: TimeParser.format((Number(i["length_seconds"]) * 1000)), // get length of video in seconds, multiply by 1000 to convert to milliseconds, use parser to parse into Time format. This parser took forever to make.
                   inline: true
                 },
                 {
