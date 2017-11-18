@@ -1,7 +1,7 @@
 const ytdl = require("ytdl-core");
 const YT_Node = require('youtube-node');
 const youtube = new YT_Node();
-const config = require('../../config.json')['configuration'];
+const config = require('../../../config.json')['configuration'];
 youtube.setKey(config['YTAPIKey']);
 class createStream{
   constructor(url, filter){
