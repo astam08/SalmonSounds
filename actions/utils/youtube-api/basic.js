@@ -29,11 +29,10 @@ class search{
 						resolve('https://www.youtube.com/watch?v=' + result.items[i].id.videoId);
 						break;
 					}else{
-						i++;
-					}
-					if(!i<result.items.length){
-						reject(new Error('No videos found.'));
-						break;
+						if(!(++i < result.items.length)){
+							reject(new Error('A video was not found.'));
+							break;
+						}
 					}
 				}
 			});
