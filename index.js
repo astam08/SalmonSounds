@@ -120,7 +120,7 @@ client.on("message", (message) => {
             });
           });
 				}, (err)=>{
-					message.channel.send(err.message).catch(console.error);
+					message.channel.send(err).catch(console.error);
 				});
       } else {
         // in voice channel but lacking perms
