@@ -21,18 +21,14 @@ class search{
 	}
 	search(){
 		return new Promise((resolve, reject)=>{
-			youtube.search(this.textforsearch, 10, (error,result)=>{
-				if(error) return reject(new Error(error.message));
+			youtube.search(this.textforsearch, 30, (error,result)=>{
+				if(result.items.some((x)=>{return x.id.kind == 'youtube#video'}) == false) reject(new Error('No videos found!'));
+				return;
 				let i = 0;
 				while(i < result.items.length){
 					if(result.items[i].id.kind == 'youtube#video'){
 						resolve('https://www.youtube.com/watch?v=' + result.items[i].id.videoId);
 						break;
-					}else{
-						if(!(++i < result.items.length)){
-							reject(new Error('A video was not found.'));
-							break;
-						}
 					}
 				}
 			});
