@@ -22,8 +22,7 @@ class search{
 	search(){
 		return new Promise((resolve, reject)=>{
 			youtube.search(this.textforsearch, 30, (error,result)=>{
-				if(result.items.some((x)=>{return x.id.kind == 'youtube#video'}) == false) reject(new Error('No videos found!'));
-				return;
+				if(result.items.some((x)=>{return x.id.kind == 'youtube#video'}) == false) return reject(new Error('No videos found!'));
 				let i = 0;
 				while(i < result.items.length){
 					if(result.items[i].id.kind == 'youtube#video'){
