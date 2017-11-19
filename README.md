@@ -14,11 +14,13 @@ A Discord music bot made with Discord.js.<br>
 ## Main Contributors
 &#8226; [iComputer7](https://github.com/iComputer7)<br>
 &#8226; [SalmonSeasoning](https://github.com/SalmonSeasoning)<br>
-Note: It's quite difficult developing and testing a "host yourself" Discord music bot without many Contributors. It's even more difficult trying to make it worthwhile considering the lack of commands and a lot of required dependencies.
+Note: It's quite difficult developing and testing a "host yourself" Discord music bot without many Contributors. It's even more difficult trying to make it worthwhile considering a lot of essential commands are challenging and time consuming to develop and implement.
 ## Website
 [GitHub Pages](https://salmonseasoning.github.io/SalmonSounds)<br>
 ## Download
 If you want to host SalmonSounds yourself, go right ahead! Just clone this repository or download a stable release in [Releases](https://github.com/SalmonSeasoning/SalmonSounds/releases)!<br>
+# Report Issues
+If you are experiencing issues with SalmonSounds, please report them here: [Issues](https://github.com/SalmonSeasoning/SalmonSounds/issues)!
 ## How to set up!
 1) [Download](https://github.com/SalmonSeasoning/SalmonSounds/releases) and Extract Repository<br>
 2) Install dependencies<br>
