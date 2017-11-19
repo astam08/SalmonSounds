@@ -159,7 +159,7 @@ client.on("message", (message) => {
         name: client.user.username,
         icon_url: client.user.displayAvatarURL
       },
-			title: 'SalmonSounds (Configuration)'
+			title: 'SalmonSounds (Configuration)',
       fields: [
         {
           name:'Status',
