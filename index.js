@@ -20,11 +20,11 @@ client.on("ready", () => {
 });
 client.on("disconnect", () => {
   // logging status (disconnected from Discord)
-  console.log('Disconnected!');
+  console.log('Disconnected! No longer trying to reconnect.');
 });
 client.on("reconnecting", ()=>{
   // logging status (attempting to reconnect to Discord)
-  console.log('Attempting to reconnect.');
+  console.log('Disconnected! Attempting to reconnect.');
 });
 client.on("message", (message) => {
   if(message.author.id == client.user.id || message.author.bot) return; // if user is a bot (or more specifically, this bot), return.
@@ -73,14 +73,12 @@ client.on("message", (message) => {
     if (message.member.voiceChannel) {
 			if(message.guild.members.get(client.user.id).voiceChannel){
 				if(message.guild.members.get(client.user.id).voiceChannel.id == message.member.voiceChannel.id){
-					message.reply(`I am already in the same voice channel that you are in. Please do ${config['prefix']}stop, ${config['prefix']}disconnect, or ${config['prefix']}leave in order to play a different song as queues have not been added in for this version of SalmonSounds.`).catch(console.error);
-					return;
+					return message.reply(`I am already in the same voice channel that you are in. Please do ${config['prefix']}stop, ${config['prefix']}disconnect, or ${config['prefix']}leave in order to play a different song as queues have not been added in for this version of SalmonSounds.`).catch(console.error);
 				}
 			}
       if (message.member.voiceChannel.joinable) {
         // parsing message
         let url = new actions.parser(message.content).getParsedMessage();
-				try {
           // getting YouTube info
           (new actions.yt_search.search(url).search()).then((videoURL)=>{
 					let stream = new actions.yt_search.createStream(videoURL, {filter: 'audioonly'});
@@ -121,11 +119,9 @@ client.on("message", (message) => {
               connection.playStream(stream.get_stream()).on("end", ()=> {connection.disconnect();});
             });
           });
+				}, (err)=>{
+					message.channel.send(err.message).catch(console.error);
 				});
-        } catch (e) {
-          // something with getting youtube video and/or playing it has failed.
-          message.channel.send(e.message).catch(console.error);
-        }
       } else {
         // in voice channel but lacking perms
         message.reply("It seems that you are in a voice channel, but I can't join!").catch(console.error);
@@ -157,12 +153,13 @@ client.on("message", (message) => {
 	}
   if(message.content.toLowerCase() == config['prefix'] + 'view-config'){
     // send message to Discord channel showing bot's config
-    message.channel.send({embed: {
+    return message.channel.send({embed: {
       color: 16753920,
       author: {
         name: client.user.username,
         icon_url: client.user.displayAvatarURL
       },
+			title: 'SalmonSounds (Configuration)'
       fields: [
         {
           name:'Status',
@@ -185,12 +182,11 @@ client.on("message", (message) => {
           inline: true
         }]
     }}).catch(console.error);
-		return;
   }
 	// eval command
   if(message.content.toLowerCase().startsWith(config['prefix'] + 'eval') && config["enable-eval"] == true && config["botAdmins"].includes(message.author.id)){
     let evalstring = String(message.content.substring((config['prefix'] + 'eval').length));
-    console.log(`EVAL RAN BY <${message.author.username}>: ${evalstring}`);
+    console.log(`${message.author.username}#${message.author.discriminator} is running the following code: ${evalstring}`);
     eval(evalstring);
 		return;
   }
