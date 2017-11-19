@@ -29,7 +29,7 @@ client.on("reconnecting", ()=>{
 client.on("message", (message) => {
   if(message.author.id == client.user.id || message.author.bot) return; // if user is a bot (or more specifically, this bot), return.
 	if(message.content.toLowerCase().startsWith(config['prefix'] + 'ping')){
-		return message.reply(`${~~client.ping}ms`);
+		return message.reply(`${~~client.ping}ms`).catch(console.error);
 	}
 	if(message.content.toLowerCase().startsWith(config['prefix'] + 'help')){
 		message.author.send({embed: {
