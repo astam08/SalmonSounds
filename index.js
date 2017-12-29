@@ -110,6 +110,11 @@ client.on("message", (message) => {
                   name: "Views",
                   value: i["view_count"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"),
                   inline: true
+                },
+                {
+                  name: "Requested By",
+                  value: message.author.tag,
+                  inline: true
                 }
               ]
             }}).catch(console.error);
