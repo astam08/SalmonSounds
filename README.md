@@ -32,7 +32,7 @@ Note: You might have to delete things such as `package.json` (for example) and s
 &#8226; Discord.js-arbitrary-ffmpeg -- **required** -- `npm install discord.js-arbitrary-ffmpeg --save`<br>
 &#8226; Node-Opus -- **required** -- `npm install node-opus --save`<br>
 &#8226; ytdl-core -- **required** -- `npm install ytdl-core --save`<br>
-&#8226; ytdl-core -- **required** -- `npm install youtube-node --save`<br>
+&#8226; youtube-node -- **required** -- `npm install youtube-node --save`<br>
 -> You can install all of the above in one line: `npm install discord.js discord.js-arbitrary-ffmpeg node-opus ytdl-core youtube-node --save`<br>
 &#8226; [FFMPEG](https://www.ffmpeg.org) -- **required** -- (add 'bin' folder location to PATH)<br>
 &#8226; Sodium `npm install sodium --save` and `npm install libsodium-wrappers --save`<br>

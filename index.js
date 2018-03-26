@@ -26,10 +26,10 @@
 	  // logging status (attempting to reconnect to Discord)
 	  console.log('Disconnected! Attempting to reconnect.');
 	});
-	
+
 	//Queue Storage
 	var userQueues = {};
-	
+
 	client.on("message", (message) => {
 	  if(message.author.id == client.user.id || message.author.bot) return; // if user is a bot (or more specifically, this bot), return.
 		//PING
@@ -80,7 +80,7 @@
 			if (message.member.voiceChannel) {
 				//Parsing Message
 				url = new actions.parser(message.content).getParsedMessage();
-				
+
 				//Creating new Queue / Adding song to Queue
 				if (userQueues[client.user.id] == undefined) {
 					userQueues[client.user.id] = [];
@@ -90,7 +90,7 @@
 					}
 					userQueues[client.user.id][userQueues[client.user.id].length] = url;
 				}
-				
+
 				if (message.member.voiceChannel.joinable) {
 					//Play sound
 					playSong(url);
@@ -173,15 +173,13 @@
 	});
 	// connect to Discord
 	client.login(config['token']);
-	
+
 	function playSong(url) {
 		// getting YouTube info
-		(new actions.yt_search.search(url).search()).then((videoURL) => {
-			let stream = new actions.yt_search.createStream(videoURL, {
-				filter: 'audioonly'
-			});
-			stream.getInfo().then((i, f) => {
-				// .. sending video info to discord channel
+		(new actions.yt_search.search(url)).init().then(videoUrl => {
+			console.log(videoUrl || 'Does not exist..');
+			let _stream = new actions.yt_search.createStream(videoUrl);
+			_stream.getInfo().then(i=>{
 				message.channel.send({
 					embed: {
 						color: 16753920,
@@ -216,7 +214,7 @@
 							}
 						]
 					}
-				}).catch(console.error);
+				});
 				message.member.voiceChannel.join().then((connection) => {
 					// joining voice channel and attempting to play stream
 					message.channel.send("Joining `" + message.member.voiceChannel.name + "`").catch(console.error);
@@ -225,17 +223,15 @@
 					});
 				});
 			});
-		}, (err) => {
-			message.channel.send(err.message).catch(console.error);
 		});
 	}
-	
+
 	function nextSong(id) {
 		//If that user's queue is empty do nothing
 		if (userQueues[id] == undefined || !userQueues[id].length) return connection.disconnect();
 		//Remove Current Song
 		userQueues[id].splice(0,1);
-		
+
 		//Play next song if it exists, else disconnect
 		if (userQueues[id].length) {
 			playSong(userQueues[id][0]);
@@ -243,3 +239,63 @@
 			return connection.disconnect();
 		}
 	}
+
+
+
+
+
+
+
+
+
+	/*
+	(new actions.yt_search.search(url).search()).then((videoURL) => {
+		let stream = new actions.yt_search.createStream(videoURL, {
+			filter: 'audioonly'
+		});
+		stream.getInfo().then((i, f) => {
+			// .. sending video info to discord channel
+			message.channel.send({
+				embed: {
+					color: 16753920,
+					thumbnail: {
+						url: i["iurl"]
+					},
+					author: {
+						name: client.user.username,
+						icon_url: client.user.displayAvatarURL,
+					},
+					title: i["title"],
+					url: i["video_url"],
+					fields: [{
+							name: "Author",
+							value: i["author"]["name"],
+							inline: true
+						},
+						{
+							name: "Duration",
+							value: TimeParser.format((Number(i["length_seconds"]) * 1000)), // get length of video in seconds, multiply by 1000 to convert to milliseconds, use parser to parse into Time format. This parser took forever to make.
+							inline: true
+						},
+						{
+							name: "Views",
+							value: i["view_count"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"),
+							inline: true
+						},
+						{
+							name: "Requested By",
+							value: message.author.tag,
+							inline: true
+						}
+					]
+				}
+			}).catch(console.error);
+			message.member.voiceChannel.join().then((connection) => {
+				// joining voice channel and attempting to play stream
+				message.channel.send("Joining `" + message.member.voiceChannel.name + "`").catch(console.error);
+				connection.playStream(stream.get_stream()).on("end", () => {
+					nextSong(client.user.id);
+				});
+			});
+		}).catch(console.error);
+		*/
