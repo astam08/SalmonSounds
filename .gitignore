@@ -56,6 +56,6 @@ typings/
 
 # dotenv environment variables file
 .env
-config.json
-config.json
-config.json
+
+# Data Storage
+*.json

@@ -1,3 +1,14 @@
+# BEING RECONSTRUCTED
+Due to the immense amount of dependencies necessary and issues that have become as a result
+of said depenencies, this project is being almost completely reworked with new standards.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 ![Release:Alpha](https://img.shields.io/badge/Release-Alpha-red.svg)
 ![API:Discord.js v11.2.1](https://img.shields.io/badge/API-Discord.js%20v11.2.1-blue.svg)
 ![Stability:Stable](https://img.shields.io/badge/Stability-Stable-green.svg)
