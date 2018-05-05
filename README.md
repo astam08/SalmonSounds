@@ -21,29 +21,32 @@ Note: It's quite difficult developing and testing a "host yourself" Discord musi
 If you want to host SalmonSounds yourself, go right ahead! Just clone this repository or download a stable release in [Releases](https://github.com/SalmonSeasoning/SalmonSounds/releases)!<br>
 # Report Issues
 If you are experiencing issues with SalmonSounds, please report them here: [Issues](https://github.com/SalmonSeasoning/SalmonSounds/issues)!
-## How to set up!
+## Normal set up
 1) [Download](https://github.com/SalmonSeasoning/SalmonSounds/releases) and Extract Repository<br>
 2) Install dependencies<br>
 3) Edit config.json<br>
-4) Run `node .` (optional: install [Forever](https://github.com/foreverjs/forever) and use that instead)<br>
+4) Run `node .` (optional: install [Forever](https://github.com/foreverjs/forever) and use `forever start index.js` instead)<br>
 Note: You might have to delete things such as `package.json` (for example) and start the Node project from scratch using `npm init`<br>
-For Docker:
+
+## Docker set up
 1) Install Docker `apt install docker.io`
 2) Clone repository `git clone https://github.com/SalmonSeasoning/SalmonSounds.git`
 3) CD into directory `cd SalmonSounds`
 4) Build the container `docker build -t salmonsounds .` Be patient! This may take 5-20 minutes to compile!
 5) Run the container `docker run -d salmonsounds`
-## Dependencies
-&#8226; Discord.js -- **required** -- `npm install discord.js --save`<br>
-&#8226; Discord.js-arbitrary-ffmpeg -- **required** -- `npm install discord.js-arbitrary-ffmpeg --save`<br>
-&#8226; Node-Opus -- **required** -- `npm install node-opus --save`<br>
-&#8226; ytdl-core -- **required** -- `npm install ytdl-core --save`<br>
-&#8226; youtube-node -- **required** -- `npm install youtube-node --save`<br>
--> You can install all of the above in one line: `npm install discord.js discord.js-arbitrary-ffmpeg node-opus ytdl-core youtube-node --save`<br>
-&#8226; [FFMPEG](https://www.ffmpeg.org) -- **required** -- (add 'bin' folder location to PATH)<br>
+## Required Dependencies
+&#8226; Discord.js `npm install discord.js --save`<br>
+&#8226; Discord.js-arbitrary-ffmpeg `npm install discord.js-arbitrary-ffmpeg --save`<br>
+&#8226; Node-Opus `npm install node-opus --save`<br>
+&#8226; ytdl-core `npm install ytdl-core --save`<br>
+&#8226; [FFMPEG](https://www.ffmpeg.org) (add 'bin' folder location to PATH)<br>
+&#8226; youtube-node `npm install youtube-node --save`<br>
+
+## Optional Dependencies
 &#8226; Sodium `npm install sodium --save` and `npm install libsodium-wrappers --save`<br>
 &#8226; UWS `npm install uws --save`<br>
 &#8226; erlpack `npm install hammerandchisel/erlpack --save`<br>
+
 ## Config.json
 ```json
 {
