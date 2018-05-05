@@ -27,6 +27,12 @@ If you are experiencing issues with SalmonSounds, please report them here: [Issu
 3) Edit config.json<br>
 4) Run `node .` (optional: install [Forever](https://github.com/foreverjs/forever) and use that instead)<br>
 Note: You might have to delete things such as `package.json` (for example) and start the Node project from scratch using `npm init`<br>
+For Docker:
+1) Install Docker `apt install docker.io`
+2) Clone repository `git clone https://github.com/SalmonSeasoning/SalmonSounds.git`
+3) CD into directory `cd SalmonSounds`
+4) Build the container `docker build -t salmonsounds .` Be patient! This may take 5-20 minutes to compile!
+5) Run the container `docker run -d salmonsounds`
 ## Dependencies
 &#8226; Discord.js -- **required** -- `npm install discord.js --save`<br>
 &#8226; Discord.js-arbitrary-ffmpeg -- **required** -- `npm install discord.js-arbitrary-ffmpeg --save`<br>
