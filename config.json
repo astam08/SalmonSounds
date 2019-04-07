@@ -1,10 +1,10 @@
 {
   "configuration":{
-    "token":"",
-    "YTAPIKey":"",
+    "token":"NTYxNjM2NDYwODQ4MDg3MDY1.XKoH5w.Qm9OHngAa_piGrl1UOEqFpT7Bqs",
+    "YTAPIKey":"AIzaSyDtnhiJiY9vZk-5rGwSDnGY8LyiaNfQRWs",
     "status":"online",
-    "prefix":"!",
-    "botAdmins":[],
+    "prefix":"_r",
+    "botAdmins":["402367348364935169"],
     "enable-eval":true
   }
 }
